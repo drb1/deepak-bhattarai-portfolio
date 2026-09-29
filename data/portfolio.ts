@@ -338,14 +338,14 @@ export const projects: Project[] = [
     slug: "salesnayak",
     index: "10",
     name: "SalesNayak",
-    type: "Field Sales Mobile App",
+    type: "SPG Client / Field Sales Mobile App",
     short: "React Native field-sales companion with background location, attendance support, push notifications and web/native integration.",
     summary:
       "A React Native mobile companion for SalesNayak that connects a web-based field-sales platform with native device capabilities including location permissions, periodic tracking and Firebase-powered notifications.",
     stack: ["React Native", "Firebase Messaging", "Notifee", "Geolocation", "Axios", "AsyncStorage", "WebView"],
     visual: "/projects/salesnayak.svg",
-    period: "Professional Project",
-    role: "React Native Developer",
+    period: "SPG Technologies · Client Project",
+    role: "Software / React Native Developer",
     featured: false,
     challenge:
       "Bridge an existing web application with native mobile capabilities while handling modern permission rules, background-location disclosure and actionable push notifications.",
@@ -419,7 +419,7 @@ export const projects: Project[] = [
     slug: "top-luxury-property-mobile",
     index: "13",
     name: "Top Luxury Property Mobile",
-    type: "Property Mobile App",
+    type: "SPG Client / Property Mobile App",
     short: "React Native mobile wrapper for a property portal with push messaging and native device integration.",
     summary:
       "A React Native mobile application that packages an existing property portal into a native experience and adds device-level capabilities such as Firebase messaging, token persistence and mobile lifecycle handling.",
@@ -555,14 +555,14 @@ export const projects: Project[] = [
     slug: "north-india-compressors-mobile",
     index: "18",
     name: "North India Compressors Mobile",
-    type: "Omega Client / CRM Mobile Apps",
+    type: "SPG Client / CRM Mobile Apps",
     short: "React Native admin and customer mobile apps for North India Compressors with CRM access, location support and Firebase messaging.",
     summary:
-      "An Omega BPO client project consisting of separate React Native admin/member and customer applications for North India Compressors CRM workflows, extending the existing web system with native device capabilities.",
+      "An SPG Technologies client project consisting of separate React Native admin/member and customer applications for North India Compressors CRM workflows, extending the existing web system with native device capabilities.",
     stack: ["React Native", "WebView", "Firebase Messaging", "Geolocation", "Axios", "AsyncStorage"],
     visual: "/projects/north-india-compressors-mobile.svg",
-    period: "Omega BPO Outsourcing · Client Project",
-    role: "Mid-Level Developer / React Native Developer",
+    period: "SPG Technologies · Client Project",
+    role: "Software / React Native Developer",
     featured: false,
     challenge:
       "Deliver mobile access to an existing CRM for different user groups while preserving web sessions and adding location and notification capabilities where needed.",
@@ -573,10 +573,10 @@ export const projects: Project[] = [
       "Implemented geolocation and backend location-update flows for relevant CRM users.",
       "Configured splash screens, native Android/iOS projects and session/cookie behaviour.",
     ],
-    highlights: ["Omega client project", "Admin & customer apps", "CRM WebView", "Firebase messaging", "Geolocation", "Device-token sync"],
+    highlights: ["SPG client project", "Admin & customer apps", "CRM WebView", "Firebase messaging", "Geolocation", "Device-token sync"],
     architecture: ["React Native shells", "CRM WebViews", "Firebase", "Location services", "Backend APIs"],
     outcome:
-      "Two role-specific mobile applications delivered as part of Omega BPO client work, extending an existing business CRM with practical native integrations.",
+      "Two role-specific mobile applications delivered as part of SPG Technologies client work, extending an existing business CRM with practical native integrations.",
   },
   {
     slug: "htr-care",
