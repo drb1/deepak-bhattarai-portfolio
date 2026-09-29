@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { profile } from "@/data/portfolio";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://deepakbhattarai.dev";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://deepak-bhattarai-portfolio.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -31,11 +31,13 @@ export const metadata: Metadata = {
     description: profile.intro,
     url: siteUrl,
     siteName: "Deepak Bhattarai Portfolio",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Deepak Bhattarai — Software Engineer & AI/ML Engineer" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Deepak Bhattarai | Software Engineer & AI/ML Engineer",
     description: profile.intro,
+    images: ["/opengraph-image"],
   },
   alternates: { canonical: siteUrl },
 };
