@@ -341,7 +341,7 @@ export const projects: Project[] = [
     type: "SPG Client / Field Sales Mobile App",
     short: "React Native field-sales companion with background location, attendance support, push notifications and web/native integration.",
     summary:
-      "A React Native mobile companion for SalesNayak that connects a web-based field-sales platform with native device capabilities including location permissions, periodic tracking and Firebase-powered notifications.",
+      "An SPG Technologies client project: a React Native mobile companion for SalesNayak that connects a web-based field-sales platform with native device capabilities including location permissions, periodic tracking and Firebase-powered notifications.",
     stack: ["React Native", "Firebase Messaging", "Notifee", "Geolocation", "Axios", "AsyncStorage", "WebView"],
     visual: "/projects/salesnayak.svg",
     period: "SPG Technologies · Client Project",
@@ -356,7 +356,7 @@ export const projects: Project[] = [
       "Integrated Firebase Cloud Messaging and Notifee for foreground and launch-time notifications.",
       "Added notification actions for deep navigation and call handling.",
     ],
-    highlights: ["Background location", "Field-visit tracking", "Firebase notifications", "Native permission flows", "WebView bridge", "Backend API sync"],
+    highlights: ["SPG client project", "Background location", "Field-visit tracking", "Firebase notifications", "WebView bridge", "Backend API sync"],
     architecture: ["React Native shell", "WebView app", "Device permissions", "FCM / Notifee", "Location services", "SalesNayak APIs"],
     outcome:
       "A production-oriented mobile integration that extends a field-sales web platform with native tracking and notification capabilities.",
@@ -371,8 +371,8 @@ export const projects: Project[] = [
       "A feature-rich React Native learning application supporting scheduled and category-based tests, test sessions, review workflows, flashcards, articles, podcasts, video content, analytics and subscription/payment journeys.",
     stack: ["React Native", "Redux", "React Navigation", "Axios", "Victory Native", "eSewa", "Khalti"],
     visual: "/projects/medical-learning-mobile.svg",
-    period: "Professional Mobile Project",
-    role: "React Native Developer",
+    period: "SPG Technologies · Client Project",
+    role: "Software / React Native Developer",
     featured: false,
     challenge:
       "Deliver a dense learning and examination product on mobile while keeping test state, timers, navigation, payments and account workflows consistent.",
@@ -422,7 +422,7 @@ export const projects: Project[] = [
     type: "SPG Client / Property Mobile App",
     short: "React Native mobile wrapper for a property portal with push messaging and native device integration.",
     summary:
-      "A React Native mobile application that packages an existing property portal into a native experience and adds device-level capabilities such as Firebase messaging, token persistence and mobile lifecycle handling.",
+      "An SPG Technologies client project: a React Native mobile application that packages an existing property portal into a native experience and adds device-level capabilities such as Firebase messaging, token persistence and mobile lifecycle handling.",
     stack: ["React Native", "Firebase Messaging", "WebView", "Axios", "AsyncStorage", "BootSplash"],
     visual: "/projects/top-luxury-property-mobile.svg",
     period: "Professional Mobile Project",
@@ -436,10 +436,10 @@ export const projects: Project[] = [
       "Implemented WebView-to-native message handling for user/device synchronisation.",
       "Added native splash/lifecycle handling and Android/iOS project configuration.",
     ],
-    highlights: ["Property portal", "React Native WebView", "Firebase messaging", "Device tokens", "Session integration"],
+    highlights: ["SPG client project", "Property portal", "React Native WebView", "Firebase messaging", "Device tokens", "Session integration"],
     architecture: ["React Native shell", "WebView portal", "Firebase messaging", "Backend API integration"],
     outcome:
-      "A mobile delivery layer that extends a web property platform with native app packaging and push-notification capabilities.",
+      "A mobile delivery layer delivered as part of SPG Technologies client work, extending a web property platform with native app packaging and push-notification capabilities.",
   },
 
   {
