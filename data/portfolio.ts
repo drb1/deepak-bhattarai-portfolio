@@ -441,7 +441,9 @@ export const projects: Project[] = [
     outcome:
       "A mobile delivery layer that extends a web property platform with native app packaging and push-notification capabilities.",
   },
-];\n\nexport const skills = [
+];
+
+export const skills = [
   {
     title: "AI / Machine Learning",
     items: ["Python", "TensorFlow/Keras", "Computer Vision", "OpenCV", "Deep Learning", "Transfer Learning", "Temporal Modelling", "LLM APIs", "Model Evaluation", "Real-time Inference"],
