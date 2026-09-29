@@ -139,6 +139,21 @@ export default function PortfolioHome() {
                 <a className="hero-action secondary-btn" href={profile.cv} download>Download CV</a>
               </div>
             </div>
+
+            <div className="hero-copy mt-8 grid overflow-hidden rounded-2xl border border-white/10 bg-black/20 backdrop-blur-sm sm:grid-cols-3">
+              <div className="border-b border-white/10 px-5 py-4 sm:border-b-0 sm:border-r">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-white/30">Experience</p>
+                <p className="mt-1 text-sm font-semibold text-white/78">9+ years in software</p>
+              </div>
+              <div className="border-b border-white/10 px-5 py-4 sm:border-b-0 sm:border-r">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-white/30">Academic</p>
+                <p className="mt-1 text-sm font-semibold text-white/78">MSc AI · Distinction</p>
+              </div>
+              <div className="px-5 py-4">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-white/30">Focus</p>
+                <p className="mt-1 text-sm font-semibold text-cyan-300">Applied AI + production systems</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -191,7 +206,7 @@ export default function PortfolioHome() {
             </div>
             <div ref={projectTrack} className="project-track flex w-max gap-5 px-5 md:px-10">
               {featuredProjects.map((project) => (
-                <Link key={project.name} href={`/projects/${project.slug}`} className="project-card group flex h-[660px] w-[88vw] max-w-[690px] shrink-0 flex-col rounded-[2rem] border border-white/10 bg-white/[0.035] p-5 transition-colors hover:bg-white/[0.055] md:p-7">
+                <Link key={project.name} href={`/projects/${project.slug}`} className="project-card group flex h-[660px] w-[88vw] max-w-[690px] shrink-0 flex-col rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.025] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/20 hover:bg-white/[0.06] md:p-7">
                   <div className="mb-6 flex items-start justify-between"><span className="text-sm text-cyan-300">{project.index}</span><span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/45">{project.type}</span></div>
                   <ProjectVisual src={project.visual} name={project.name} />
                   <div className="mt-7 flex flex-1 flex-col justify-between">
