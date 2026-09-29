@@ -1,6 +1,6 @@
 # Deepak Bhattarai — GSAP Portfolio
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdrb1%2Fdeepak-bhattarai-portfolio&project-name=deepak-bhattarai-portfolio&repository-name=deepak-bhattarai-portfolio)
+[Import existing GitHub repository into Vercel](https://vercel.com/new)
 
 Complete portfolio website built with **Next.js + TypeScript + Tailwind CSS + GSAP / ScrollTrigger**.
 
@@ -39,9 +39,11 @@ npm start
 
 ## Deploy to Vercel
 
-1. Import this repository into Vercel.
-2. Set `NEXT_PUBLIC_SITE_URL` to your final domain.
-3. Deploy.
+1. Open Vercel **Add New → Project**.
+2. Under **Import Git Repository**, select `drb1/deepak-bhattarai-portfolio` and click **Import**.
+3. Do **not** use the Vercel clone/template flow for this repository, because the GitHub repository already exists.
+4. Set `NEXT_PUBLIC_SITE_URL` to your final Vercel or custom domain.
+5. Deploy.
 
 Example:
 
