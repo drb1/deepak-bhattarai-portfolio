@@ -1,0 +1,8 @@
+{
+  "name": "Deepak Bhattarai Portfolio",
+  "short_name": "Deepak",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07090c",
+  "theme_color": "#07090c"
+}
