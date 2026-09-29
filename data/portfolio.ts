@@ -441,6 +441,143 @@ export const projects: Project[] = [
     outcome:
       "A mobile delivery layer that extends a web property platform with native app packaging and push-notification capabilities.",
   },
+
+  {
+    slug: "dental-nursing-guide",
+    index: "14",
+    name: "Dental Nursing Guide",
+    type: "Learning / Content Platform",
+    short: "Next.js and Laravel learning platform with blogs, FAQs, search, SEO and structured dental-nursing content.",
+    summary:
+      "A substantial dental-nursing learning and content platform combining public study resources with a maintainable editorial backend. The system includes structured blogs, FAQ categories and topics, global search, SEO metadata and media workflows.",
+    stack: ["Next.js", "TypeScript", "Laravel", "PHP", "MySQL", "RTK Query", "Zod", "SunEditor", "DigitalOcean Spaces"],
+    visual: "/projects/dental-nursing-guide.svg",
+    period: "Professional Project",
+    role: "Full-Stack / PHP Developer",
+    featured: false,
+    challenge:
+      "Build a content-rich learning platform where dental-nursing resources remain easy to discover, edit and publish while supporting search, SEO and scalable content organisation.",
+    contribution: [
+      "Built and extended Laravel APIs for blogs, FAQs, categories, topics and searchable learning content.",
+      "Implemented dynamic Next.js FAQ category pages with slug-based routing, accordion navigation and category-specific question search.",
+      "Extended global search so users can discover questions, blogs and active FAQ content from one interface.",
+      "Built blog CMS workflows with rich-text editing, categories, tags, feature/status controls and scheduled publishing.",
+      "Implemented SEO fields, canonical metadata, Open Graph/Twitter images and media uploads backed by DigitalOcean Spaces.",
+      "Worked on production upload limits, storage configuration, FormData handling and API/debugging issues.",
+    ],
+    highlights: ["FAQ knowledge base", "Blog CMS", "Cross-content search", "SEO & social metadata", "Rich-text publishing", "DigitalOcean Spaces"],
+    architecture: ["Next.js frontend", "Laravel API", "MySQL", "Search/content services", "DigitalOcean Spaces"],
+    outcome:
+      "A production learning-content platform demonstrating end-to-end work across Laravel APIs, Next.js UX, editorial tooling, search and SEO.",
+  },
+  {
+    slug: "dental-job-online",
+    index: "15",
+    name: "Dental Job Online",
+    type: "Recruitment / Messaging Platform",
+    short: "Dental recruitment platform with recruiter/job-seeker messaging, attachments, notifications and job/application email workflows.",
+    summary:
+      "A recruitment platform for dental employers and job seekers, with real-time-style messaging, recipient-specific account flows, attachment handling and extensive transactional communication around jobs and applications.",
+    stack: ["Laravel", "PHP", "Blade", "MySQL", "Broadcasting", "Storage", "Mailables", "Notifications"],
+    visual: "/projects/dental-job-online.svg",
+    period: "Professional Project",
+    role: "PHP / Laravel Developer",
+    featured: false,
+    challenge:
+      "Support reliable communication between recruiters, job seekers and administrators while keeping messages, attachments and transactional notifications tied to the correct account and job context.",
+    contribution: [
+      "Implemented recruiter/job-seeker messaging using Laravel controllers, persisted message models and broadcast events.",
+      "Added message-status handling and attachment storage for richer conversations.",
+      "Built branded Laravel Blade email templates for recruiter, applicant and administrative workflows.",
+      "Implemented verification, job, applicant and password-reset email/notification flows.",
+      "Added recipient-specific login links and account-aware messaging behaviour.",
+      "Worked on push/broadcast notification flows around communication events.",
+    ],
+    highlights: ["Recruiter ↔ job-seeker messaging", "Attachments", "Broadcast events", "Transactional email", "Verification flows", "Admin notifications"],
+    architecture: ["Laravel application", "Message models", "Broadcast events", "Storage attachments", "Mail / notifications", "MySQL"],
+    outcome:
+      "A recruitment communication system demonstrating Laravel backend depth across messaging, events, storage and transactional user journeys.",
+  },
+  {
+    slug: "omega-bpo-website",
+    index: "16",
+    name: "Omega BPO Website",
+    type: "Corporate Web Platform",
+    short: "Corporate Next.js website covering outsourcing services, talent solutions, case studies, contact workflows and rich media.",
+    summary:
+      "The corporate website for Omega BPO Outsourcing, built as a multi-page Next.js experience presenting services, talent solutions, benefits, case studies, company information and contact journeys.",
+    stack: ["Next.js", "React", "Bootstrap", "AOS", "Axios", "SendGrid", "Nodemailer", "Google Maps"],
+    visual: "/projects/omega-bpo-website.svg",
+    period: "Omega BPO Outsourcing",
+    role: "Mid-Level Developer",
+    featured: false,
+    challenge:
+      "Translate a broad BPO service catalogue into a responsive corporate experience with strong visual presentation, reusable sections and practical lead/contact workflows.",
+    contribution: [
+      "Built and maintained Next.js pages for company, services, FAQs, privacy, terms and specialist service areas.",
+      "Developed reusable sections for benefits, case studies, testimonials, talent management and work-process content.",
+      "Implemented responsive navigation, sliders, media sections and animation-enhanced presentation.",
+      "Worked on contact submission flows using server-side email integrations.",
+      "Integrated supporting UI libraries, mapping and cookie-consent behaviour.",
+    ],
+    highlights: ["Corporate multi-page site", "Service catalogue", "Case studies", "Contact/email workflows", "Responsive UI", "Rich media"],
+    architecture: ["Next.js pages", "Reusable React components", "API/contact route", "Email services", "Media assets"],
+    outcome:
+      "A full corporate marketing platform showing production frontend work, reusable component design and lead-generation flows.",
+  },
+  {
+    slug: "omega-bpo-wireframe",
+    index: "17",
+    name: "Omega BPO Interactive Wireframe",
+    type: "UI / Interaction Prototype",
+    short: "Interactive Next.js/Tailwind concept used to explore a more modern Omega BPO visual direction and motion system.",
+    summary:
+      "A separate interactive prototype exploring a redesigned visual system for Omega BPO using modern typography, Tailwind-based layout and motion-driven content presentation.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    visual: "/projects/omega-bpo-wireframe.svg",
+    period: "Omega BPO Outsourcing",
+    role: "Frontend Developer",
+    featured: false,
+    challenge:
+      "Rapidly explore and communicate a new visual direction for a corporate site before committing to a full production redesign.",
+    contribution: [
+      "Built a separate Next.js/TypeScript prototype rather than modifying the production corporate site directly.",
+      "Created reusable atomic elements for animated words, characters, buttons and text fields.",
+      "Developed prototype sections for hero content, services, features, process and company information.",
+      "Used Tailwind CSS and Framer Motion to test modern spacing, typography and interaction patterns.",
+    ],
+    highlights: ["Design prototype", "Animated typography", "Framer Motion", "Tailwind design system", "Reusable UI atoms"],
+    architecture: ["Next.js", "Atomic UI elements", "Section components", "Framer Motion"],
+    outcome:
+      "A focused interaction prototype demonstrating rapid UI experimentation and modern frontend motion/design work.",
+  },
+  {
+    slug: "north-india-compressors-mobile",
+    index: "18",
+    name: "North India Compressors Mobile",
+    type: "Business / CRM Mobile Apps",
+    short: "React Native admin and customer mobile shells for North India Compressors with CRM access, location support and Firebase messaging.",
+    summary:
+      "A pair of React Native mobile applications providing admin/member and customer access to North India Compressors CRM workflows, extending existing web functionality with native device capabilities.",
+    stack: ["React Native", "WebView", "Firebase Messaging", "Geolocation", "Axios", "AsyncStorage"],
+    visual: "/projects/north-india-compressors-mobile.svg",
+    period: "Professional Mobile Project",
+    role: "React Native Developer",
+    featured: false,
+    challenge:
+      "Deliver mobile access to an existing CRM for different user groups while preserving web sessions and adding location and notification capabilities where needed.",
+    contribution: [
+      "Built separate React Native admin/member and customer mobile applications around the existing CRM.",
+      "Integrated authenticated WebView flows for member and customer access.",
+      "Added Firebase Cloud Messaging and device-token handling to the admin/member app.",
+      "Implemented geolocation and backend location-update flows for relevant CRM users.",
+      "Configured splash screens, native Android/iOS projects and session/cookie behaviour.",
+    ],
+    highlights: ["Admin & customer apps", "CRM WebView", "Firebase messaging", "Geolocation", "Device-token sync", "Native app packaging"],
+    architecture: ["React Native shells", "CRM WebViews", "Firebase", "Location services", "Backend APIs"],
+    outcome:
+      "Two role-specific mobile applications extending an existing business CRM with practical native integrations.",
+  },
 ];
 
 export const skills = [
