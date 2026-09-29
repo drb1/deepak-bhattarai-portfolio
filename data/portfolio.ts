@@ -578,6 +578,36 @@ export const projects: Project[] = [
     outcome:
       "Two role-specific mobile applications extending an existing business CRM with practical native integrations.",
   },
+
+  {
+    slug: "htr-care",
+    index: "19",
+    name: "HTR Care",
+    type: "Healthcare / Care Services Platform",
+    short: "Accessible care-services website with custom CMS, enquiry and recruitment flows, local SEO pages and cloud media storage.",
+    summary:
+      "A modern website for HTR Care, a UK home-care provider, designed to help families understand care services, find local coverage and submit enquiries while giving the internal team tools to manage content and recruitment information.",
+    stack: ["Next.js", "Node.js", "Tailwind CSS", "Azure Blob Storage", "Resend", "CMS", "SEO"],
+    href: "https://htrcare.com",
+    visual: "/projects/htr-care.svg",
+    period: "Omega-related Client Project",
+    role: "Software Developer / Project Contributor",
+    featured: false,
+    challenge:
+      "Create an accessible, trustworthy and content-manageable care-services website that works well for families, older users and recruitment visitors while supporting strong local search visibility.",
+    contribution: [
+      "Contributed to a responsive Next.js/Tailwind website for UK domiciliary and home-care services.",
+      "Worked with structured service, location, company, blog, FAQ and recruitment content.",
+      "Supported custom CMS workflows for editable pages, images and metadata.",
+      "Worked on enquiry and recruitment form flows with automated email handling.",
+      "Supported SEO-oriented page structure, metadata and local-service landing pages.",
+      "Integrated cloud-hosted media workflows using Azure Blob Storage.",
+    ],
+    highlights: ["Custom CMS", "Care-service pages", "Location SEO", "Enquiry forms", "Recruitment flows", "Azure media storage"],
+    architecture: ["Next.js frontend", "Node.js APIs", "Custom CMS", "Azure Blob Storage", "Resend email", "SEO/local landing pages"],
+    outcome:
+      "A scalable care-services web platform combining accessible UX, content management, enquiry generation and location-focused discoverability.",
+  },
 ];
 
 export const skills = [
