@@ -279,6 +279,168 @@ export const projects: Project[] = [
     outcome:
       "Additional production web-development experience across backend logic, data and user-facing features.",
   },
+
+  {
+    slug: "open-notes",
+    index: "08",
+    name: "Open Notes",
+    type: "Publishing / Blog Platform",
+    short: "Full-stack publishing platform with authentication, editorial workflows, SEO and rich content management.",
+    summary:
+      "A Next.js publishing platform for technology, travel and general-interest content, with public discovery pages and a private administration area for managing posts, categories, tags and publishing status.",
+    stack: ["Next.js", "TypeScript", "MongoDB", "Mongoose", "NextAuth", "React Query", "Ant Design", "Vercel Blob"],
+    visual: "/projects/open-notes.svg",
+    period: "Personal Project",
+    role: "Full-Stack Developer",
+    featured: false,
+    challenge:
+      "Create a content platform that supports both a polished public reading experience and practical editorial workflows without maintaining a separate CMS product.",
+    contribution: [
+      "Built Next.js App Router pages and API routes for blogs, categories, tags, users and site statistics.",
+      "Implemented admin CRUD workflows for creating, editing, featuring, drafting and publishing content.",
+      "Integrated authentication flows including NextAuth, Google sign-in and email-related account workflows.",
+      "Added rich-text editing, media handling, related content and category-based discovery.",
+      "Implemented sitemap/SEO support together with Vercel analytics and performance tooling.",
+    ],
+    highlights: ["Admin publishing dashboard", "Authentication", "Categories & tags", "Rich content editing", "SEO & sitemap", "Analytics"],
+    architecture: ["Next.js UI", "App Router APIs", "NextAuth", "MongoDB / Mongoose", "Vercel services"],
+    outcome:
+      "A complete personal publishing platform demonstrating full-stack product ownership across editorial tooling, authentication, data modelling and public content delivery.",
+  },
+  {
+    slug: "rcn-mobile-app",
+    index: "09",
+    name: "RCN Mobile App",
+    type: "React Native Community App",
+    short: "Bilingual community mobile app covering membership, donations, news, notices, media, maps and organisational information.",
+    summary:
+      "A React Native application that brings community information and member-facing services into one mobile experience, including news, notices, membership, donations, downloads, video, location and transparency-oriented sections.",
+    stack: ["React Native", "React Navigation", "TanStack Query", "Axios", "i18next", "React Native Maps"],
+    visual: "/projects/rcn-mobile-app.svg",
+    period: "Mobile Project",
+    role: "React Native Developer",
+    featured: false,
+    challenge:
+      "Organise many content and service areas into a maintainable mobile experience while supporting bilingual content and API-driven updates.",
+    contribution: [
+      "Built navigation and screen flows for news, notices, membership, donations, downloads, videos and organisational information.",
+      "Integrated API data with Axios and TanStack Query, including app-focus refresh behaviour.",
+      "Added English/Nepali localisation with i18next.",
+      "Implemented map/location functionality and media-oriented screens.",
+      "Worked on payment-related membership/donation flows with eSewa and Khalti assets and supporting UI.",
+    ],
+    highlights: ["English / Nepali localisation", "Membership & donations", "News & notices", "Maps", "Media & downloads", "React Query data flows"],
+    architecture: ["React Native", "Navigation", "REST APIs", "React Query cache", "Localisation", "Native device features"],
+    outcome:
+      "A broad React Native application showing experience with real-world navigation, API state, multilingual UX and community-service workflows.",
+  },
+  {
+    slug: "salesnayak",
+    index: "10",
+    name: "SalesNayak",
+    type: "Field Sales Mobile App",
+    short: "React Native field-sales companion with background location, attendance support, push notifications and web/native integration.",
+    summary:
+      "A React Native mobile companion for SalesNayak that connects a web-based field-sales platform with native device capabilities including location permissions, periodic tracking and Firebase-powered notifications.",
+    stack: ["React Native", "Firebase Messaging", "Notifee", "Geolocation", "Axios", "AsyncStorage", "WebView"],
+    visual: "/projects/salesnayak.svg",
+    period: "Professional Project",
+    role: "React Native Developer",
+    featured: false,
+    challenge:
+      "Bridge an existing web application with native mobile capabilities while handling modern permission rules, background-location disclosure and actionable push notifications.",
+    contribution: [
+      "Integrated the SalesNayak web application inside a React Native WebView with two-way message handling.",
+      "Implemented foreground/background location permission flows and periodic field-location updates.",
+      "Synchronised employee/company identifiers and device tokens with backend APIs.",
+      "Integrated Firebase Cloud Messaging and Notifee for foreground and launch-time notifications.",
+      "Added notification actions for deep navigation and call handling.",
+    ],
+    highlights: ["Background location", "Field-visit tracking", "Firebase notifications", "Native permission flows", "WebView bridge", "Backend API sync"],
+    architecture: ["React Native shell", "WebView app", "Device permissions", "FCM / Notifee", "Location services", "SalesNayak APIs"],
+    outcome:
+      "A production-oriented mobile integration that extends a field-sales web platform with native tracking and notification capabilities.",
+  },
+  {
+    slug: "medical-learning-mobile",
+    index: "11",
+    name: "Medical Learning App",
+    type: "Mobile Learning / Exam Platform",
+    short: "React Native medical-learning app with scheduled tests, practice, flashcards, analytics, multimedia and paid plans.",
+    summary:
+      "A feature-rich React Native learning application supporting scheduled and category-based tests, test sessions, review workflows, flashcards, articles, podcasts, video content, analytics and subscription/payment journeys.",
+    stack: ["React Native", "Redux", "React Navigation", "Axios", "Victory Native", "eSewa", "Khalti"],
+    visual: "/projects/medical-learning-mobile.svg",
+    period: "Professional Mobile Project",
+    role: "React Native Developer",
+    featured: false,
+    challenge:
+      "Deliver a dense learning and examination product on mobile while keeping test state, timers, navigation, payments and account workflows consistent.",
+    contribution: [
+      "Built scheduled, board-based and category-based test experiences with question, timer, flag, review and submit flows.",
+      "Implemented dashboard sections for notices, upcoming tests, educational content and board navigation.",
+      "Worked on analytics, flashcards, articles, podcasts, video and multimedia content screens.",
+      "Integrated Redux-based application state and reusable API request utilities.",
+      "Implemented plan, package and payment-related flows including eSewa and Khalti integration screens.",
+    ],
+    highlights: ["Timed exams", "Practice & review", "Flashcards", "Analytics", "Multimedia learning", "Plan/payment flows"],
+    architecture: ["React Native", "Redux store", "REST APIs", "Test engine", "Content modules", "Payment flows"],
+    outcome:
+      "A substantial mobile education product demonstrating complex state management, exam UX and multi-module React Native development.",
+  },
+  {
+    slug: "seven-wonders-food-hub",
+    index: "12",
+    name: "Seven Wonders Food Hub",
+    type: "Restaurant Web Platform",
+    short: "Responsive restaurant website with menus, specials, food gallery, ordering calls-to-action, reservations and contact flows.",
+    summary:
+      "A visual restaurant website built around menu discovery and customer conversion, with featured dishes, daily specials, restaurant information, gallery content and reservation/contact interactions.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Ant Design", "Framer Motion", "AOS"],
+    visual: "/projects/seven-wonders-food-hub.svg",
+    period: "Web Project",
+    role: "Frontend / Full-Stack Developer",
+    featured: false,
+    challenge:
+      "Present a large food catalogue and restaurant brand in a visually engaging way while keeping the site responsive and conversion-focused.",
+    contribution: [
+      "Built the Next.js restaurant homepage and supporting menu/gallery pages.",
+      "Developed reusable components for banners, specials, menu sections, highlights, chef content and contact information.",
+      "Implemented reservation and ordering-oriented UI flows.",
+      "Added responsive styling and motion using Tailwind, Framer Motion and AOS.",
+      "Structured and optimised extensive restaurant imagery and menu assets.",
+    ],
+    highlights: ["Menu discovery", "Daily specials", "Food gallery", "Reservation UI", "Responsive design", "Motion effects"],
+    architecture: ["Next.js", "Reusable UI components", "Static/media assets", "Reservation/contact flows"],
+    outcome:
+      "A polished customer-facing restaurant experience demonstrating branded UI, responsive design and conversion-oriented frontend development.",
+  },
+  {
+    slug: "top-luxury-property-mobile",
+    index: "13",
+    name: "Top Luxury Property Mobile",
+    type: "Property Mobile App",
+    short: "React Native mobile wrapper for a property portal with push messaging and native device integration.",
+    summary:
+      "A React Native mobile application that packages an existing property portal into a native experience and adds device-level capabilities such as Firebase messaging, token persistence and mobile lifecycle handling.",
+    stack: ["React Native", "Firebase Messaging", "WebView", "Axios", "AsyncStorage", "BootSplash"],
+    visual: "/projects/top-luxury-property-mobile.svg",
+    period: "Professional Mobile Project",
+    role: "React Native Developer",
+    featured: false,
+    challenge:
+      "Turn an existing browser-based property platform into a reliable mobile application while preserving session behaviour and integrating native notification services.",
+    contribution: [
+      "Embedded the property portal in a React Native WebView with cookie/session support.",
+      "Integrated Firebase Cloud Messaging and device-token storage.",
+      "Implemented WebView-to-native message handling for user/device synchronisation.",
+      "Added native splash/lifecycle handling and Android/iOS project configuration.",
+    ],
+    highlights: ["Property portal", "React Native WebView", "Firebase messaging", "Device tokens", "Session integration"],
+    architecture: ["React Native shell", "WebView portal", "Firebase messaging", "Backend API integration"],
+    outcome:
+      "A mobile delivery layer that extends a web property platform with native app packaging and push-notification capabilities.",
+  },
 ];
 
 export const skills = [
