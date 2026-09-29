@@ -1,0 +1,38 @@
+DEEPAK BHATTARAI — COMPLETE PORTFOLIO PACKAGE
+
+Core
+- Next.js / TypeScript
+- Tailwind CSS
+- GSAP + ScrollTrigger + @gsap/react
+
+Pages
+- /                         Portfolio homepage
+- /projects                 All projects
+- /projects/language-vision
+- /projects/driver-monitoring
+- /projects/nepal-disaster-relief
+- /projects/wizam
+- /projects/jodinee
+- /projects/environmental-monitoring
+- /projects/nepaluk
+- /api/health               Health endpoint
+
+Features
+- Responsive navigation
+- GSAP hero reveal
+- Parallax glow effects
+- Scroll progress indicator
+- Animated experience timeline
+- Desktop pinned horizontal project showcase
+- Mobile horizontal snap project browsing
+- Project case-study animations
+- Reduced-motion support
+- SEO metadata
+- JSON-LD Person schema
+- Sitemap and robots
+- Downloadable CV
+- Project visuals
+- Docker / Dokploy deployment
+
+Main editable content
+- data/portfolio.ts
