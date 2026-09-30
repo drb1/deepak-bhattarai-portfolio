@@ -25,7 +25,7 @@ export const profile = {
   email: "dpkraj578@gmail.com",
   linkedin: "https://uk.linkedin.com/in/deepak-bhattarai-7a5250193",
   github: "https://github.com/drb1",
-  cv: "/files/Deepak_Bhattarai_CV.docx",
+  cv: "/files/Deepak_Bhattarai_AI_CV.pdf",
   title: "Software Engineer × AI/ML Engineer",
   intro:
     "I build production software, intelligent systems and real-time platforms — combining nine years of software engineering with an MSc in Artificial Intelligence with Distinction.",
