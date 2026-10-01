@@ -33,7 +33,7 @@ export default function SiteHeader() {
           <a href={profile.cv} className="hidden rounded-full border border-white/12 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white/70 transition hover:border-white/30 hover:text-white sm:inline-flex" download>
             CV
           </a>
-          <a href={`mailto:${profile.email}`} className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-black transition hover:scale-[1.02]">
+          <a href={`mailto:${profile.email}`} className="contact-cta inline-flex min-w-[92px] items-center justify-center whitespace-nowrap rounded-full bg-white px-4 py-2 text-sm font-semibold transition hover:scale-[1.02] hover:bg-cyan-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70">
             Let&apos;s talk
           </a>
           <button onClick={() => setOpen((v) => !v)} className="grid h-9 w-9 place-items-center rounded-full border border-white/12 lg:hidden" aria-expanded={open} aria-label="Toggle navigation">

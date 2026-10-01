@@ -56,6 +56,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .primary-btn { background: white; color: black; }
 .primary-btn:hover { transform: translateY(-2px); }
+.contact-cta { color: #07090c !important; }
+.contact-cta:visited { color: #07090c !important; }
 .secondary-btn { border: 1px solid rgba(255,255,255,.16); color: rgba(255,255,255,.82); }
 .secondary-btn:hover { border-color: rgba(255,255,255,.32); background: rgba(255,255,255,.05); color: white; transform: translateY(-2px); }
 .project-card, .skill-card, .project-visual {
