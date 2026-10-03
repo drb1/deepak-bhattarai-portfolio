@@ -92,6 +92,7 @@ export const projects: Project[] = [
     summary:
       "A production-oriented English-learning platform spanning structured lessons, exams, placement testing, AI-assisted writing and speaking assessment, audio workflows, live classes and role-based administration.",
     stack: ["Next.js", "TypeScript", "FastAPI", "SQLAlchemy", "PostgreSQL", "LLM APIs", "LiveKit", "Docker"],
+    href: "https://evision.languagevision.com",
     visual: "/projects/language-vision-real.svg",
     period: "2026 — Present",
     role: "Freelance AI & Full-Stack Developer",
@@ -452,7 +453,7 @@ export const projects: Project[] = [
     summary:
       "A substantial dental-nursing learning and content platform combining public study resources with a maintainable editorial backend. The system includes structured blogs, FAQ categories and topics, global search, SEO metadata and media workflows.",
     stack: ["Next.js", "TypeScript", "Laravel", "PHP", "MySQL", "RTK Query", "Zod", "SunEditor", "DigitalOcean Spaces"],
-    href: "https://schoolofdentalnursing.com",
+    href: "https://dentalnursingguide.com",
     visual: "/projects/dental-nursing-guide-real.svg",
     period: "School of Dental Nursing · UK",
     role: "Full-Stack / PHP Developer",
@@ -510,6 +511,7 @@ export const projects: Project[] = [
     summary:
       "The corporate website for Omega BPO Outsourcing, built as a multi-page Next.js experience presenting services, talent solutions, benefits, case studies, company information and contact journeys.",
     stack: ["Next.js", "React", "Bootstrap", "AOS", "Axios", "SendGrid", "Nodemailer", "Google Maps"],
+    href: "https://omegaincorporations.com",
     visual: "/projects/omega-bpo-website-real.svg",
     period: "Omega BPO Outsourcing",
     role: "Mid-Level Developer",
