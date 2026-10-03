@@ -289,7 +289,8 @@ export const projects: Project[] = [
     summary:
       "A Next.js publishing platform for technology, travel and general-interest content, with public discovery pages and a private administration area for managing posts, categories, tags and publishing status.",
     stack: ["Next.js", "TypeScript", "MongoDB", "Mongoose", "NextAuth", "React Query", "Ant Design", "Vercel Blob"],
-    visual: "/projects/open-notes.svg",
+    href: "https://opennotez.com",
+    visual: "/projects/open-notes-real.svg",
     period: "Personal Project",
     role: "Full-Stack Developer",
     featured: false,
@@ -397,7 +398,7 @@ export const projects: Project[] = [
     summary:
       "A visual restaurant website built around menu discovery and customer conversion, with featured dishes, daily specials, restaurant information, gallery content and reservation/contact interactions.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Ant Design", "Framer Motion", "AOS"],
-    visual: "/projects/seven-wonders-food-hub.svg",
+    visual: "/projects/seven-wonders-real.svg",
     period: "Web Project",
     role: "Frontend / Full-Stack Developer",
     featured: false,
