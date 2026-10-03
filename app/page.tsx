@@ -3,7 +3,7 @@ import PortfolioHome from "@/components/PortfolioHome";
 import { profile } from "@/data/portfolio";
 
 export const metadata: Metadata = {
-  title: "Deepak Bhattarai | Software Engineer & AI/ML Engineer",
+  title: { absolute: "Deepak Bhattarai | Software Engineer & AI/ML Engineer" },
   description: profile.intro,
   alternates: { canonical: "/" },
   openGraph: {
