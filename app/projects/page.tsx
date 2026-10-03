@@ -5,8 +5,22 @@ import ProjectVisual from "@/components/ProjectVisual";
 import { projects } from "@/data/portfolio";
 
 export const metadata = {
-  title: "Projects | Deepak Bhattarai",
-  description: "Selected AI, software engineering, full-stack and mobile projects by Deepak Bhattarai.",
+  title: "Projects",
+  description: "Explore AI, machine learning, full-stack, backend, mobile and research projects built by Deepak Bhattarai.",
+  alternates: { canonical: "/projects" },
+  openGraph: {
+    type: "website",
+    url: "/projects",
+    title: "Software Engineering & AI Projects | Deepak Bhattarai",
+    description: "Explore AI, machine learning, full-stack, backend, mobile and research projects built by Deepak Bhattarai.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Deepak Bhattarai project portfolio" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Software Engineering & AI Projects | Deepak Bhattarai",
+    description: "Explore AI, machine learning, full-stack, backend, mobile and research projects built by Deepak Bhattarai.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function ProjectsPage() {
