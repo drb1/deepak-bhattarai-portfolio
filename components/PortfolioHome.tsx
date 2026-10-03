@@ -208,7 +208,7 @@ export default function PortfolioHome() {
               {featuredProjects.map((project) => (
                 <Link key={project.name} href={`/projects/${project.slug}`} className="project-card group flex h-[660px] w-[88vw] max-w-[690px] shrink-0 flex-col rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.025] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/20 hover:bg-white/[0.06] md:p-7">
                   <div className="mb-6 flex items-start justify-between"><span className="text-sm text-cyan-300">{project.index}</span><span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/45">{project.type}</span></div>
-                  <ProjectVisual src={project.visual} name={project.name} href={project.href} />
+                  <ProjectVisual src={project.visual} name={project.name} href={project.href} priority />
                   <div className="mt-7 flex flex-1 flex-col justify-between">
                     <div><h3 className="text-4xl font-medium tracking-[-0.05em] md:text-5xl">{project.name}</h3><p className="mt-4 max-w-xl leading-7 text-white/58">{project.short}</p></div>
                     <div className="mt-5 flex items-center justify-between border-t border-white/10 pt-5 text-sm"><span className="text-white/45">View case study</span><span className="transition-transform group-hover:translate-x-1">↗</span></div>
