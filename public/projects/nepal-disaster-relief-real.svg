@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#071018"/><stop offset="1" stop-color="#0b1117"/></linearGradient>
+    <radialGradient id="r" cx="80%" cy="15%" r="70%"><stop offset="0" stop-color="#0e7490" stop-opacity=".34"/><stop offset="1" stop-color="#071018" stop-opacity="0"/></radialGradient>
+    <clipPath id="c"><rect width="1200" height="760" rx="30"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="1200" height="760" fill="url(#g)"/><rect width="1200" height="760" fill="url(#r)"/>
+    <g opacity=".07" stroke="#d8fbff"><path d="M0 120H1200M0 240H1200M0 360H1200M0 480H1200M0 600H1200"/><path d="M120 0V760M240 0V760M360 0V760M480 0V760M600 0V760M720 0V760M840 0V760M960 0V760M1080 0V760"/></g>
+    <text x="76" y="90" font-family="Arial" font-size="14" font-weight="700" letter-spacing="3.5" fill="#67e8f9">PUBLIC DATA PLATFORM</text>
+    <text x="76" y="185" font-family="Arial" font-size="54" font-weight="700" fill="#f8fafc">NEPAL DISASTER RELIEF</text>
+    <text x="78" y="230" font-family="Arial" font-size="20" fill="#86a6b5">Situation monitoring · Missing persons · Transparency</text>
+    <rect x="660" y="120" width="430" height="390" rx="34" fill="#ffffff" fill-opacity=".96"/>
+         <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiNiNDIzMTgiLz4KICA8cGF0aCBkPSJNMzIgMTEgNDkgMTh2MTJjMCAxMS4yLTYuOCAxOS44LTE3IDIzLTEwLjItMy4yLTE3LTExLjgtMTctMjNWMThsMTctN1oiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPHBhdGggZD0iTTMyIDIzdjEyIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSI0MyIgcj0iMi44IiBmaWxsPSIjZmZmIi8+Cjwvc3ZnPgo=" x="710" y="165" width="330" height="300" preserveAspectRatio="xMidYMid meet" opacity="1"/>
+         <rect x="660" y="120" width="430" height="390" rx="34" fill="none" stroke="#ffffff" stroke-opacity=".14"/>
+    <rect x="76" y="590" width="120" height="38" rx="19" fill="#0f1720" stroke="#2a3d49"/><text x="93" y="615" font-family="Arial" font-size="14" fill="#cbe7ef">FASTAPI</text><rect x="208" y="590" width="124" height="38" rx="19" fill="#0f1720" stroke="#2a3d49"/><text x="225" y="615" font-family="Arial" font-size="14" fill="#cbe7ef">POSTGRESQL</text><rect x="344" y="590" width="124" height="38" rx="19" fill="#0f1720" stroke="#2a3d49"/><text x="361" y="615" font-family="Arial" font-size="14" fill="#cbe7ef">AUTOMATION</text>
+    <text x="76" y="704" font-family="Arial" font-size="13" letter-spacing="2.6" fill="#526d7a">LIVE / AUTHENTIC PROJECT ASSET · DEEPAK BHATTARAI</text>
+  </g></svg>
