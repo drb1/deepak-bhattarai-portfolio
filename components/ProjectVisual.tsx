@@ -1,6 +1,8 @@
 import Image from "next/image";
 
 export default function ProjectVisual({ src, name, priority = false }: { src: string; name: string; priority?: boolean }) {
+  const isSvg = src.toLowerCase().endsWith(".svg");
+
   return (
     <div className="project-visual relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0b0f14]">
       <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex h-9 items-center gap-1.5 border-b border-white/[0.06] bg-black/20 px-4 backdrop-blur-sm">
@@ -16,6 +18,8 @@ export default function ProjectVisual({ src, name, priority = false }: { src: st
         height={760}
         className="h-auto w-full pt-9 transition-transform duration-700 ease-out group-hover:scale-[1.018]"
         priority={priority}
+        loading={isSvg ? "eager" : undefined}
+        unoptimized={isSvg}
       />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-white/[0.02]" />
     </div>
