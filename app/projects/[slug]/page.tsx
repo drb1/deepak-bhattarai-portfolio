@@ -30,7 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       siteName: "Deepak Bhattarai Portfolio",
       images: [
         {
-          url: project.visual,
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
           alt: `${project.name} project by Deepak Bhattarai`,
         },
       ],
@@ -39,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: `${title} | Deepak Bhattarai`,
       description: project.summary,
-      images: [project.visual],
+      images: ["/opengraph-image"],
     },
   };
 }
