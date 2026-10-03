@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { profile } from "@/data/portfolio";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://deepak-bhattarai-portfolio.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://drb.codes";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -61,6 +62,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {children}
+        <Script
+          src="https://www.thunderbolt.com/gateway/api/v1/thunderbolt-ui/embed.js"
+          strategy="afterInteractive"
+        />
         <Analytics />
         <SpeedInsights />
       </body>
