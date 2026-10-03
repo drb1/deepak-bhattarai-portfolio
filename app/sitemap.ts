@@ -1,15 +1,30 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/data/portfolio";
 
+const base = process.env.NEXT_PUBLIC_SITE_URL || "https://drb.codes";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://drb.codes";
+  const lastModified = new Date();
+
   return [
-    { url: base, changeFrequency: "monthly", priority: 1 },
-    { url: `${base}/projects`, changeFrequency: "monthly", priority: 0.9 },
+    {
+      url: base,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    {
+      url: `${base}/projects`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
     ...projects.map((project) => ({
       url: `${base}/projects/${project.slug}`,
+      lastModified,
       changeFrequency: "monthly" as const,
-      priority: 0.8,
+      priority: project.featured ? 0.9 : 0.7,
+      images: [`${base}${project.visual}`],
     })),
   ];
 }
