@@ -24,7 +24,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "monthly" as const,
       priority: project.featured ? 0.9 : 0.7,
-      images: [`${base}${project.visual}`],
     })),
   ];
 }
