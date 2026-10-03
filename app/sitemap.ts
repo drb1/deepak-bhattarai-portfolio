@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { projects } from "@/data/portfolio";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://deepakbhattarai.dev";
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://drb.codes";
   return [
     { url: base, changeFrequency: "monthly", priority: 1 },
     { url: `${base}/projects`, changeFrequency: "monthly", priority: 0.9 },
