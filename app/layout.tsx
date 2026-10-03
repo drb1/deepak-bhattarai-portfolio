@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { profile } from "@/data/portfolio";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://deepak-bhattarai-portfolio.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://drb.codes";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -27,6 +28,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: profile.name }],
   creator: profile.name,
+  publisher: profile.name,
+  applicationName: "Deepak Bhattarai Portfolio",
+  category: "technology",
+  manifest: "/site.webmanifest",
+  referrer: "origin-when-cross-origin",
   openGraph: {
     type: "website",
     title: "Deepak Bhattarai | Software Engineer & AI/ML Engineer",
@@ -41,19 +47,32 @@ export const metadata: Metadata = {
     description: profile.intro,
     images: ["/opengraph-image"],
   },
-  alternates: { canonical: siteUrl },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: profile.name,
-    jobTitle: "Software Engineer and AI/ML Engineer",
-    url: siteUrl,
-    email: `mailto:${profile.email}`,
-    sameAs: [profile.linkedin, profile.github],
-    alumniOf: { "@type": "CollegeOrUniversity", name: "London Metropolitan University" },
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": `${siteUrl}/#person`,
+        name: profile.name,
+        jobTitle: "Software Engineer and AI/ML Engineer",
+        url: siteUrl,
+        email: `mailto:${profile.email}`,
+        sameAs: [profile.linkedin, profile.github],
+        alumniOf: { "@type": "CollegeOrUniversity", name: "London Metropolitan University" },
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        url: siteUrl,
+        name: "Deepak Bhattarai Portfolio",
+        description: profile.intro,
+        inLanguage: "en-GB",
+        publisher: { "@id": `${siteUrl}/#person` },
+      },
+    ],
   };
 
   return (
@@ -61,6 +80,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {children}
+        <Script
+          src="https://www.thunderbolt.com/gateway/api/v1/thunderbolt-ui/embed.js"
+          strategy="afterInteractive"
+        />
         <Analytics />
         <SpeedInsights />
       </body>

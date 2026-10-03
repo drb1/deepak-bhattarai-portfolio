@@ -48,7 +48,7 @@ npm start
 Example:
 
 ```text
-NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+NEXT_PUBLIC_SITE_URL=https://drb.codes
 ```
 
 ## Update your content
@@ -92,7 +92,7 @@ This package includes a multi-stage `Dockerfile` and Next.js standalone output.
 ```bash
 docker build -t deepak-portfolio .
 docker run --rm -p 3000:3000 \
-  -e NEXT_PUBLIC_SITE_URL=https://yourdomain.com \
+  -e NEXT_PUBLIC_SITE_URL=https://drb.codes \
   deepak-portfolio
 ```
 
@@ -104,7 +104,7 @@ docker run --rm -p 3000:3000 \
 4. Add environment variable:
 
 ```text
-NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+NEXT_PUBLIC_SITE_URL=https://drb.codes
 ```
 
 5. Configure the domain and HTTPS in Dokploy.
@@ -120,3 +120,30 @@ NEXT_PUBLIC_SITE_URL=https://yourdomain.com
 - [ ] Decide whether the public CV should be DOCX or PDF.
 - [ ] Check mobile layout on iPhone and Android widths.
 - [ ] Run Lighthouse and fix any production-specific performance warnings.
+
+
+## Thunderbolt Agent
+
+The Thunderbolt website assistant is loaded globally through Next.js `<Script strategy="afterInteractive" />` in `app/layout.tsx`.
+
+Source:
+
+```text
+https://www.thunderbolt.com/gateway/api/v1/thunderbolt-ui/embed.js
+```
+
+Configure the Thunderbolt agent dashboard/knowledge base separately. The website only loads the approved Thunderbolt embed script.
+
+## Production domain
+
+Primary domain:
+
+```text
+https://drb.codes
+```
+
+Set the Vercel environment variable:
+
+```text
+NEXT_PUBLIC_SITE_URL=https://drb.codes
+```
