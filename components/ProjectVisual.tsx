@@ -12,6 +12,10 @@ export default function ProjectVisual({
   priority?: boolean;
 }) {
   const domain = href ? new URL(href).hostname.replace(/^www\./, "") : null;
+  const isSvg = src.toLowerCase().endsWith(".svg");
+  const imageClass =
+    "aspect-[1200/760] w-full object-cover pt-9 transition-transform duration-700 ease-out group-hover:scale-[1.018]";
+
   return (
     <div className="project-visual relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0b0f14]">
       <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex h-9 items-center gap-1.5 border-b border-white/[0.06] bg-black/20 px-4 backdrop-blur-sm">
@@ -27,14 +31,28 @@ export default function ProjectVisual({
           <span className="ml-auto text-[10px] uppercase tracking-[0.18em] text-white/25">Case study preview</span>
         )}
       </div>
-      <Image
-        src={src}
-        alt={`${name} project visual`}
-        width={1200}
-        height={760}
-        className="aspect-[1200/760] w-full object-cover pt-9 transition-transform duration-700 ease-out group-hover:scale-[1.018]"
-        priority={priority}
-      />
+
+      {isSvg ? (
+        <img
+          src={src}
+          alt={`${name} project visual`}
+          width={1200}
+          height={760}
+          className={imageClass}
+          loading={priority ? "eager" : "lazy"}
+          decoding="async"
+        />
+      ) : (
+        <Image
+          src={src}
+          alt={`${name} project visual`}
+          width={1200}
+          height={760}
+          className={imageClass}
+          priority={priority}
+        />
+      )}
+
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-white/[0.02]" />
     </div>
   );
