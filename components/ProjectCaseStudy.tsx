@@ -44,7 +44,7 @@ export default function ProjectCaseStudy({ project, nextProject }: { project: Pr
               <p className="max-w-4xl text-2xl leading-[1.45] text-white/74 md:text-4xl">{project.short}</p>
               <div className="lg:justify-self-end"><p className="text-xs uppercase tracking-[0.22em] text-white/35">My role</p><p className="mt-2 text-lg text-white/75">{project.role}</p>{project.href && <a href={project.href} target="_blank" rel="noreferrer" className="mt-5 inline-flex text-sm font-semibold text-cyan-300">Visit live project ↗</a>}</div>
             </div>
-            <div className="case-visual mt-14"><ProjectVisual src={project.visual} name={project.name} priority /></div>
+            <div className="case-visual mt-14"><ProjectVisual src={project.visual} name={project.name} href={project.href} priority /></div>
           </div>
         </section>
 

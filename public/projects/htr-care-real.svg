@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<defs>
+  <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#071018"/><stop offset=".58" stop-color="#0b1820"/><stop offset="1" stop-color="#102a32"/></linearGradient>
+  <radialGradient id="hr" cx="82%" cy="32%" r="55%"><stop offset="0" stop-color="#38bdf8" stop-opacity=".20"/><stop offset="1" stop-color="#071018" stop-opacity="0"/></radialGradient>
+  <clipPath id="hc"><rect width="1200" height="760" rx="30"/></clipPath>
+</defs>
+<g clip-path="url(#hc)">
+  <rect width="1200" height="760" fill="url(#hg)"/>
+  <rect width="1200" height="760" fill="url(#hr)"/>
+  <text x="76" y="90" font-family="Arial" font-size="14" font-weight="700" letter-spacing="3.5" fill="#67e8f9">OMEGA CLIENT · CARE SERVICES</text>
+  <text x="76" y="195" font-family="Arial" font-size="72" font-weight="700" fill="#fff">HTR CARE</text>
+  <text x="78" y="245" font-family="Arial" font-size="21" fill="#d8e8ed">Home care · CMS · Local SEO · Enquiries</text>
+
+  <rect x="76" y="325" width="220" height="72" rx="18" fill="#071018" fill-opacity=".72" stroke="#fff" stroke-opacity=".15"/><text x="102" y="368" font-family="Arial" font-size="17" font-weight="700" fill="#fff">CUSTOM CMS</text>
+  <rect x="314" y="325" width="220" height="72" rx="18" fill="#071018" fill-opacity=".72" stroke="#fff" stroke-opacity=".15"/><text x="341" y="368" font-family="Arial" font-size="17" font-weight="700" fill="#fff">LOCAL SEO</text>
+  <rect x="76" y="415" width="220" height="72" rx="18" fill="#071018" fill-opacity=".72" stroke="#fff" stroke-opacity=".15"/><text x="102" y="458" font-family="Arial" font-size="17" font-weight="700" fill="#fff">ENQUIRIES</text>
+  <rect x="314" y="415" width="220" height="72" rx="18" fill="#071018" fill-opacity=".72" stroke="#fff" stroke-opacity=".15"/><text x="341" y="458" font-family="Arial" font-size="17" font-weight="700" fill="#fff">AZURE MEDIA</text>
+
+  <g transform="translate(640 100)">
+    <rect width="470" height="470" rx="34" fill="#0a1720" stroke="#fff" stroke-opacity=".12"/>
+    <path d="M72 231 235 96 398 231v170H72z" fill="#102c36" stroke="#67e8f9" stroke-opacity=".35" stroke-width="3"/>
+    <path d="M46 235 235 78 424 235" fill="none" stroke="#67e8f9" stroke-opacity=".75" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="198" y="290" width="74" height="111" rx="8" fill="#173e49"/>
+    <rect x="110" y="272" width="54" height="54" rx="10" fill="#174653"/>
+    <rect x="306" y="272" width="54" height="54" rx="10" fill="#174653"/>
+    <circle cx="235" cy="207" r="48" fill="#0e7490"/>
+    <circle cx="235" cy="194" r="18" fill="#d5f5fa"/>
+    <path d="M204 239c8-25 54-25 62 0" fill="#d5f5fa"/>
+    <circle cx="335" cy="190" r="34" fill="#164e63"/>
+    <circle cx="335" cy="180" r="13" fill="#bfeaf1"/>
+    <path d="M314 213c6-18 36-18 42 0" fill="#bfeaf1"/>
+    <path d="M274 210c24 14 36 14 56 0" fill="none" stroke="#67e8f9" stroke-width="5" stroke-linecap="round"/>
+    <rect x="106" y="418" width="258" height="34" rx="17" fill="#0d2630"/>
+    <text x="235" y="440" text-anchor="middle" font-family="Arial" font-size="12" fill="#bfeaf1">CARE · CONTENT · LOCAL DISCOVERY</text>
+  </g>
+
+  <text x="76" y="704" font-family="Arial" font-size="13" letter-spacing="2.6" fill="#b4cbd3">SELF-CONTAINED PROJECT VISUAL · DEEPAK BHATTARAI</text>
+</g>
+</svg>

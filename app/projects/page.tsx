@@ -36,7 +36,7 @@ export default function ProjectsPage() {
           <div className="mt-20 grid gap-6 lg:grid-cols-2">
             {projects.map((project) => (
               <Link key={project.slug} href={`/projects/${project.slug}`} className="group rounded-[2rem] border border-white/10 bg-white/[0.025] p-5 transition hover:bg-white/[0.045] md:p-7">
-                <ProjectVisual src={project.visual} name={project.name} />
+                <ProjectVisual src={project.visual} name={project.name} href={project.href} />
                 <div className="mt-6 flex items-start justify-between gap-5"><div><p className="text-xs uppercase tracking-[0.18em] text-cyan-300">{project.type}</p><h2 className="mt-3 text-3xl font-medium tracking-[-0.04em] md:text-4xl">{project.name}</h2><p className="mt-4 max-w-xl leading-7 text-white/55">{project.short}</p></div><span className="mt-7 text-2xl transition-transform group-hover:translate-x-1">↗</span></div>
               </Link>
             ))}
