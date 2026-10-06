@@ -274,9 +274,21 @@ export const projects: Project[] = [
       "Supported deployment and end-to-end mobile workflows.",
     ],
     highlights: ["Flutter mobile app", "Discovery & matching", "Chat", "Push notifications", "Media uploads"],
-    architecture: ["Flutter", "Dio", "Laravel API", "Firebase", "Media storage"],
+    architecture: ["Flutter UI", "Provider state", "Dio API client", "Laravel API", "Firebase", "Media storage"],
+    proofPoints: [
+      { label: "Client", value: "Flutter", detail: "A cross-platform mobile experience covering onboarding, discovery, matching and messaging." },
+      { label: "Core journey", value: "Profile → Discover → Match → Chat", detail: "The product connects identity, discovery and communication as one continuous user flow." },
+      { label: "Integration", value: "Dio · Laravel · Firebase", detail: "REST APIs, backend business logic and notification services work together across the mobile stack." },
+      { label: "Engagement", value: "Chat · Push · Media", detail: "Realtime-style communication and media workflows support ongoing user interaction after matching." },
+    ],
+    decisions: [
+      { title: "Keep mobile state explicit", detail: "Provider is used to coordinate authentication, profile and interaction state so navigation and API-driven screens do not depend on scattered widget-local state." },
+      { title: "Separate transport from product logic", detail: "Dio handles API communication while Laravel owns account, profile, matching and persistence rules, keeping client concerns distinct from backend decisions." },
+      { title: "Use Firebase for device-facing events", detail: "Push notifications are delegated to Firebase so match and communication events can reach users outside the active application session." },
+      { title: "Treat media as a dedicated workflow", detail: "Profile and conversation media are uploaded and stored separately from normal JSON API state, reducing coupling between binary assets and transactional application data." },
+    ],
     outcome:
-      "A feature-rich cross-platform mobile project demonstrating product flows, API integration, state management and user-engagement features.",
+      "A cross-platform social product connecting onboarding, discovery, matching, messaging and notifications through a coherent Flutter and Laravel architecture.",
   },
   {
     slug: "environmental-monitoring",
@@ -519,9 +531,21 @@ export const projects: Project[] = [
       "Worked on production upload limits, storage configuration, FormData handling and API/debugging issues.",
     ],
     highlights: ["FAQ knowledge base", "Blog CMS", "Cross-content search", "SEO & social metadata", "Rich-text publishing", "DigitalOcean Spaces"],
-    architecture: ["Next.js frontend", "Laravel API", "MySQL", "Search/content services", "DigitalOcean Spaces"],
+    architecture: ["Next.js frontend", "Laravel API", "MySQL", "Search / content services", "DigitalOcean Spaces", "SEO metadata"],
+    proofPoints: [
+      { label: "Content model", value: "Blogs · FAQs · Topics · Categories", detail: "Structured content types support both editorial publishing and learning-oriented navigation." },
+      { label: "Discovery", value: "Cross-content search", detail: "Users can search across questions, blog content and active FAQ material from a shared interface." },
+      { label: "Publishing", value: "Rich text · Scheduling · Status", detail: "Editorial workflows support controlled publication rather than hard-coded page content." },
+      { label: "Distribution", value: "SEO · Open Graph · Media", detail: "Search metadata, social previews and object-backed media are treated as part of the publishing system." },
+    ],
+    decisions: [
+      { title: "Model content instead of hard-coding pages", detail: "Blogs, FAQs, categories and topics are stored as structured backend entities so editors can organise and publish material without code changes." },
+      { title: "Use slug-based routing for durable URLs", detail: "Next.js category and content routes are driven by readable slugs, supporting discoverability, sharing and maintainable information architecture." },
+      { title: "Search across content boundaries", detail: "Global search brings together questions, blogs and FAQ content so users do not need to know which internal content type contains the answer." },
+      { title: "Keep large media outside the application database", detail: "DigitalOcean Spaces handles uploaded assets while MySQL stores content and metadata, keeping binary storage separate from relational publishing data." },
+    ],
     outcome:
-      "A production learning-content platform demonstrating end-to-end work across Laravel APIs, Next.js UX, editorial tooling, search and SEO.",
+      "A maintainable publishing and learning platform combining structured Laravel content APIs, Next.js discovery, editorial tooling, search, SEO and external media storage.",
   },
   {
     slug: "dental-job-online",
@@ -548,9 +572,21 @@ export const projects: Project[] = [
       "Worked on push/broadcast notification flows around communication events.",
     ],
     highlights: ["Recruiter ↔ job-seeker messaging", "Attachments", "Broadcast events", "Transactional email", "Verification flows", "Admin notifications"],
-    architecture: ["Laravel application", "Message models", "Broadcast events", "Storage attachments", "Mail / notifications", "MySQL"],
+    architecture: ["Recruiter / job seeker UI", "Laravel controllers", "Message models", "Broadcast events", "Attachment storage", "Mail / notifications"],
+    proofPoints: [
+      { label: "Participants", value: "Recruiter ↔ Job seeker", detail: "Communication rules account for two different user roles and their job/application context." },
+      { label: "Messaging", value: "Persisted + broadcast", detail: "Messages are stored as application state and can also trigger broadcast-style updates." },
+      { label: "Rich conversations", value: "Attachments · Status", detail: "Message workflows include uploaded files and delivery/read-style state rather than plain text only." },
+      { label: "Transactional flows", value: "Jobs · Applications · Verification", detail: "Email and notification journeys support the wider recruitment lifecycle around messaging." },
+    ],
+    decisions: [
+      { title: "Persist before broadcasting", detail: "Messages are modelled as durable database records, with broadcast events used for delivery updates rather than treating realtime transport as the source of truth." },
+      { title: "Carry account context through communication", detail: "Recipient-specific links and role-aware behaviour reduce ambiguity when recruiters and job seekers enter the platform from emails or notifications." },
+      { title: "Keep attachments out of message payloads", detail: "Files are handled through storage while message records retain the relationship and metadata needed to reconstruct each conversation." },
+      { title: "Use dedicated transactional templates", detail: "Verification, job, applicant and administrative events use targeted Laravel mail/notification flows so communication matches the recipient and action." },
+    ],
     outcome:
-      "A recruitment communication system demonstrating Laravel backend depth across messaging, events, storage and transactional user journeys.",
+      "A role-aware recruitment communication system combining durable messaging, event broadcasting, attachments and transactional notifications across recruiter and job-seeker journeys.",
   },
   {
     slug: "omega-bpo-website",
