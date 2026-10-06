@@ -391,9 +391,21 @@ export const projects: Project[] = [
       "Implemented sitemap/SEO support together with Vercel analytics and performance tooling.",
     ],
     highlights: ["Admin publishing dashboard", "Authentication", "Categories & tags", "Rich content editing", "SEO & sitemap", "Analytics"],
-    architecture: ["Next.js UI", "App Router APIs", "NextAuth", "MongoDB / Mongoose", "Vercel services"],
+    architecture: ["Public Next.js UI", "Admin workspace", "App Router APIs", "NextAuth", "MongoDB / Mongoose", "Vercel services"],
+    proofPoints: [
+      { label: "Ownership", value: "End-to-end product", detail: "Public reading, administration, authentication, storage and deployment are managed within one product." },
+      { label: "Editorial workflow", value: "Draft · Feature · Publish", detail: "Posts move through practical editorial states instead of being hard-coded or immediately public." },
+      { label: "Identity", value: "NextAuth + Google", detail: "The private administration surface is protected with account-aware authentication flows." },
+      { label: "Distribution", value: "SEO · Sitemap · Analytics", detail: "Search discovery and usage visibility are built into the publishing lifecycle." },
+    ],
+    decisions: [
+      { title: "Build the CMS into the product", detail: "The private administration area uses the same Next.js application and data model as the public site, avoiding the operational overhead of a separate CMS." },
+      { title: "Model editorial state explicitly", detail: "Draft, featured and published states make content lifecycle decisions visible and manageable rather than relying on manual code changes." },
+      { title: "Use document-oriented storage for content", detail: "MongoDB and Mongoose fit flexible article, category and tag structures while still providing schema validation at the application layer." },
+      { title: "Treat discovery as part of publishing", detail: "Sitemap generation, metadata, related content and analytics are handled alongside content creation so publishing is more than simply rendering an article page." },
+    ],
     outcome:
-      "A complete personal publishing platform demonstrating full-stack product ownership across editorial tooling, authentication, data modelling and public content delivery.",
+      "A self-managed publishing product demonstrating full-stack ownership across editorial tooling, authentication, content modelling, discovery and production delivery.",
   },
   {
     slug: "rcn-mobile-app",
@@ -418,9 +430,21 @@ export const projects: Project[] = [
       "Worked on payment-related membership/donation flows with eSewa and Khalti assets and supporting UI.",
     ],
     highlights: ["English / Nepali localisation", "Membership & donations", "News & notices", "Maps", "Media & downloads", "React Query data flows"],
-    architecture: ["React Native", "Navigation", "REST APIs", "React Query cache", "Localisation", "Native device features"],
+    architecture: ["React Native UI", "React Navigation", "REST APIs", "TanStack Query cache", "i18next", "Maps / device features"],
+    proofPoints: [
+      { label: "Languages", value: "English + Nepali", detail: "The mobile experience supports bilingual navigation and content through application-level localisation." },
+      { label: "Community services", value: "Membership · Donations", detail: "Member-facing actions sit alongside information, media and organisational content." },
+      { label: "Data delivery", value: "API + Query cache", detail: "Remote content is fetched and refreshed through Axios and TanStack Query rather than unmanaged screen requests." },
+      { label: "Native features", value: "Maps · Media · Downloads", detail: "The app combines web-service data with mobile-specific discovery and content experiences." },
+    ],
+    decisions: [
+      { title: "Centralise server state with TanStack Query", detail: "API data, caching and refresh behaviour are managed outside individual screens, reducing duplicated loading logic across news, notices and service areas." },
+      { title: "Make localisation structural", detail: "i18next is integrated at the application level so English and Nepali are treated as first-class experiences rather than duplicated screen implementations." },
+      { title: "Use navigation to organise a broad product", detail: "React Navigation separates many community sections into predictable flows while preserving a consistent mobile shell." },
+      { title: "Keep payment-facing journeys contextual", detail: "Membership and donation experiences are integrated alongside the relevant community flows, with eSewa and Khalti support reflected in the mobile UI." },
+    ],
     outcome:
-      "A broad React Native application showing experience with real-world navigation, API state, multilingual UX and community-service workflows.",
+      "A bilingual community mobile product combining API-driven content, membership and donation journeys, localisation, maps and media within a maintainable React Native architecture.",
   },
   {
     slug: "salesnayak",
@@ -445,9 +469,21 @@ export const projects: Project[] = [
       "Added notification actions for deep navigation and call handling.",
     ],
     highlights: ["SPG client project", "Background location", "Field-visit tracking", "Firebase notifications", "WebView bridge", "Backend API sync"],
-    architecture: ["React Native shell", "WebView app", "Device permissions", "FCM / Notifee", "Location services", "SalesNayak APIs"],
+    architecture: ["React Native shell", "WebView bridge", "Device permissions", "Location services", "FCM / Notifee", "SalesNayak APIs"],
+    proofPoints: [
+      { label: "Integration pattern", value: "Web + Native", detail: "An existing web field-sales product is extended through a React Native shell instead of being rebuilt from scratch." },
+      { label: "Location", value: "Foreground + Background", detail: "Permission-aware location workflows support periodic field activity updates." },
+      { label: "Notifications", value: "FCM + Notifee", detail: "Push events can surface while the app is active and when users re-enter from a notification." },
+      { label: "Identity sync", value: "Employee · Company · Device", detail: "Mobile identifiers and tokens are synchronised with backend APIs so native events remain tied to the correct user context." },
+    ],
+    decisions: [
+      { title: "Extend the web platform instead of duplicating it", detail: "A WebView bridge preserves the existing SalesNayak web experience while React Native adds capabilities that require native device access." },
+      { title: "Make permissions part of the product flow", detail: "Location access is requested and handled explicitly because modern mobile platforms distinguish foreground and background tracking permissions." },
+      { title: "Keep native and web contexts synchronised", detail: "Two-way messaging and backend identity synchronisation ensure WebView actions, employee data and device state remain connected." },
+      { title: "Use actionable notifications", detail: "Firebase Messaging and Notifee support navigation and call-related actions, turning push messages into workflow entry points rather than passive alerts." },
+    ],
     outcome:
-      "A production-oriented mobile integration that extends a field-sales web platform with native tracking and notification capabilities.",
+      "A hybrid field-sales mobile integration that preserves an existing web product while adding permission-aware tracking, native notifications and device-to-backend synchronisation.",
   },
   {
     slug: "medical-learning-mobile",
