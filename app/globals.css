@@ -59,10 +59,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  animation:
-    hero-letter-float 3.8s ease-in-out infinite,
-    hero-letter-gradient 7.5s ease-in-out infinite;
-  will-change: transform, background-position;
+  animation: hero-letter-gradient 7.5s ease-in-out infinite;
+  will-change: background-position;
 }
 
 .hero-gradient-space {
@@ -70,20 +68,53 @@ button, a { -webkit-tap-highlight-color: transparent; }
   width: 0.3em;
 }
 
-.hero-gradient-letter:nth-child(4n + 1) { animation-delay: -0.15s, -0.8s; }
-.hero-gradient-letter:nth-child(4n + 2) { animation-delay: -0.65s, -2.1s; }
-.hero-gradient-letter:nth-child(4n + 3) { animation-delay: -1.15s, -3.4s; }
-.hero-gradient-letter:nth-child(4n) { animation-delay: -1.65s, -4.7s; }
-
-@keyframes hero-letter-float {
-  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
-  45% { transform: translate3d(0, -0.055em, 0) rotate(-0.25deg); }
-  70% { transform: translate3d(0, 0.025em, 0) rotate(0.18deg); }
-}
-
 @keyframes hero-letter-gradient {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
+}
+
+
+.tech-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.tech-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: tech-marquee-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+.tech-marquee-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.tech-logo-item {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.65rem;
+  color: rgba(255,255,255,.58);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+.tech-logo-item img {
+  filter: saturate(.9);
+  opacity: .9;
+}
+
+@keyframes tech-marquee-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
 }
 
 .section-label {
@@ -128,5 +159,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+  .tech-marquee-track {
+    transform: none !important;
   }
 }
