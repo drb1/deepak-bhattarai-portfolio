@@ -122,36 +122,44 @@ export default function PortfolioHome() {
           <div className="hero-orb-a absolute -left-20 top-24 h-72 w-72 rounded-full bg-cyan-400/15 blur-3xl" />
           <div className="hero-orb-b absolute -right-24 bottom-10 h-96 w-96 rounded-full bg-blue-500/15 blur-3xl" />
           <div className="relative z-10 mx-auto flex w-full max-w-[1500px] flex-col justify-end">
-            <p className="hero-kicker mb-5 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-300">{profile.location} · Software Engineering · Applied AI</p>
-            <h1 className="overflow-hidden text-[17vw] font-semibold leading-[0.74] tracking-[-0.075em] md:text-[12vw]">
-              <span className="hero-word inline-block">DEEPAK</span>
+            <div className="hero-kicker mb-6 flex flex-wrap items-center gap-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-300">{profile.location} · Software Engineer · Applied AI</p>
+              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-300/[0.06] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-emerald-200">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
+                {profile.availability}
+              </span>
+            </div>
+
+            <h1 className="overflow-hidden text-[13vw] font-semibold leading-[0.82] tracking-[-0.07em] md:text-[8.6vw]">
+              <span className="hero-word inline-block">SOFTWARE ENGINEER</span>
             </h1>
-            <h1 className="overflow-hidden text-[17vw] font-semibold leading-[0.82] tracking-[-0.075em] text-white/28 md:text-[12vw]">
-              <span className="hero-word inline-block">BHATTARAI</span>
+            <h1 className="overflow-hidden text-[13vw] font-semibold leading-[0.88] tracking-[-0.07em] text-white/28 md:text-[8.6vw]">
+              <span className="hero-word inline-block">BUILDING PRODUCTION AI.</span>
             </h1>
+
             <div className="mt-10 grid gap-8 border-t border-white/12 pt-7 md:grid-cols-[1.25fr_.75fr]">
               <div>
-                <p className="hero-copy max-w-3xl text-xl leading-relaxed text-white/78 md:text-2xl">{profile.intro}</p>
-                <p className="hero-copy mt-4 text-sm uppercase tracking-[0.22em] text-white/35">{profile.title}</p>
+                <p className="hero-copy text-sm font-semibold uppercase tracking-[0.2em] text-white/38">{profile.name} · {profile.title}</p>
+                <p className="hero-copy mt-4 max-w-3xl text-xl leading-relaxed text-white/78 md:text-2xl">{profile.intro}</p>
               </div>
               <div className="flex flex-wrap items-start gap-3 md:justify-end">
-                <a className="hero-action primary-btn" href="#projects">View projects</a>
+                <a className="hero-action primary-btn" href="#projects">View flagship work</a>
                 <a className="hero-action secondary-btn" href={profile.cv} download>Download CV</a>
               </div>
             </div>
 
             <div className="hero-copy mt-8 grid overflow-hidden rounded-2xl border border-white/10 bg-black/20 backdrop-blur-sm sm:grid-cols-3">
               <div className="border-b border-white/10 px-5 py-4 sm:border-b-0 sm:border-r">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-white/30">Experience</p>
-                <p className="mt-1 text-sm font-semibold text-white/78">9+ years in software</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-white/30">Engineering</p>
+                <p className="mt-1 text-sm font-semibold text-white/78">9+ years · Web · Mobile · Backend</p>
               </div>
               <div className="border-b border-white/10 px-5 py-4 sm:border-b-0 sm:border-r">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-white/30">Academic</p>
-                <p className="mt-1 text-sm font-semibold text-white/78">MSc AI · Distinction</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-white/30">AI foundation</p>
+                <p className="mt-1 text-sm font-semibold text-white/78">MSc Artificial Intelligence · Distinction</p>
               </div>
               <div className="px-5 py-4">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-white/30">Focus</p>
-                <p className="mt-1 text-sm font-semibold text-cyan-300">Applied AI + production systems</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-white/30">Current focus</p>
+                <p className="mt-1 text-sm font-semibold text-cyan-300">Applied AI · Production systems</p>
               </div>
             </div>
           </div>
@@ -161,7 +169,7 @@ export default function PortfolioHome() {
           <div className="mx-auto max-w-[1500px]">
             <p className="reveal-item section-label">01 / About</p>
             <div className="mt-8 grid gap-12 lg:grid-cols-[1.35fr_.65fr]">
-              <h2 className="reveal-item max-w-5xl text-4xl font-medium leading-[1.07] tracking-[-0.045em] md:text-7xl">Nine years building software. Now combining production engineering with artificial intelligence.</h2>
+              <h2 className="reveal-item max-w-5xl text-4xl font-medium leading-[1.07] tracking-[-0.045em] md:text-7xl">9+ years building production software. Now applying that engineering depth to intelligent systems.</h2>
               <div className="reveal-item self-end space-y-5 text-lg leading-8 text-white/60">
                 <p>MSc Artificial Intelligence with Distinction from London Metropolitan University.</p>
                 <p>My work spans full-stack and mobile products, deep-learning research, LLM-enabled assessment, real-time inference, public-data automation and cloud/VPS deployment.</p>
@@ -239,8 +247,25 @@ export default function PortfolioHome() {
         <section id="skills" className="reveal-section border-y border-white/10 px-5 py-28 md:px-10 md:py-36">
           <div className="mx-auto max-w-[1500px]">
             <p className="reveal-item section-label">05 / Skills</p>
-            <div className="mt-12 grid gap-5 md:grid-cols-2">
-              {skills.map((group) => <article key={group.title} className="reveal-item skill-card rounded-3xl border border-white/10 p-7 md:p-9"><h3 className="text-2xl font-medium tracking-[-0.03em]">{group.title}</h3><div className="mt-6 flex flex-wrap gap-2">{group.items.map((item) => <span key={item} className="rounded-full border border-white/10 px-3 py-2 text-sm text-white/58 transition hover:border-cyan-300/40 hover:text-white">{item}</span>)}</div></article>)}
+            <div className="mt-6 flex flex-col justify-between gap-5 border-b border-white/10 pb-7 lg:flex-row lg:items-end">
+              <h2 className="reveal-item max-w-3xl text-4xl font-medium tracking-[-0.045em] md:text-6xl">Engineering first. AI where it adds real value.</h2>
+              <p className="reveal-item max-w-xl leading-7 text-white/48">My strongest working stack is Python/TypeScript, modern web and API engineering, PostgreSQL and applied AI/ML. Mobile and additional technologies extend that core.</p>
+            </div>
+            <div className="mt-8 grid gap-5 md:grid-cols-2">
+              {skills.map((group, index) => (
+                <article
+                  key={group.title}
+                  className={`reveal-item skill-card rounded-3xl border p-7 md:p-9 ${index < 2 ? "border-cyan-300/20 bg-cyan-300/[0.025]" : "border-white/10"}`}
+                >
+                  <div className="flex items-center justify-between gap-4">
+                    <h3 className="text-2xl font-medium tracking-[-0.03em]">{group.title}</h3>
+                    {index < 2 && <span className="rounded-full border border-cyan-300/20 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-cyan-300">Primary</span>}
+                  </div>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {group.items.map((item) => <span key={item} className="rounded-full border border-white/10 px-3 py-2 text-sm text-white/58 transition hover:border-cyan-300/40 hover:text-white">{item}</span>)}
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -259,9 +284,9 @@ export default function PortfolioHome() {
           <div className="absolute inset-x-0 bottom-0 mx-auto h-72 max-w-5xl rounded-full bg-cyan-400/10 blur-[120px]" />
           <div className="relative mx-auto max-w-[1500px] text-center">
             <p className="section-label">07 / Contact</p>
-            <h2 className="mx-auto mt-7 max-w-5xl text-5xl font-medium leading-[.98] tracking-[-0.06em] md:text-8xl">Building something ambitious?</h2>
-            <p className="mx-auto mt-7 max-w-2xl text-lg leading-8 text-white/55">I&apos;m interested in software engineering, AI/ML engineering, applied AI and research-driven product opportunities.</p>
-            <div className="mt-10 flex flex-wrap justify-center gap-3"><a className="primary-btn" href={`mailto:${profile.email}`}>Email me</a><a className="secondary-btn" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a><a className="secondary-btn" href={profile.github} target="_blank" rel="noreferrer">GitHub</a></div>
+            <h2 className="mx-auto mt-7 max-w-5xl text-5xl font-medium leading-[.98] tracking-[-0.06em] md:text-8xl">Need a software engineer who can build AI into real products?</h2>
+            <p className="mx-auto mt-7 max-w-2xl text-lg leading-8 text-white/55">Open to Software Engineering, Applied AI/ML and research-driven product opportunities where strong engineering and intelligent systems meet.</p>
+            <div className="mt-10 flex flex-wrap justify-center gap-3"><a className="primary-btn" href={`mailto:${profile.email}`}>Email me</a><a className="secondary-btn" href={profile.cv} download>Download CV</a><a className="secondary-btn" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a><a className="secondary-btn" href={profile.github} target="_blank" rel="noreferrer">GitHub</a></div>
           </div>
         </section>
       </main>
