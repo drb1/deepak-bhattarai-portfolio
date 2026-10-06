@@ -208,7 +208,7 @@ export default function PortfolioHome() {
           </div>
         </section>
 
-        <section id="about" className="reveal-section px-5 pb-28 pt-14 md:px-10 md:pb-36 md:pt-20">
+        <section id="about" className="reveal-section px-5 pb-20 pt-12 md:px-10 md:pb-24 md:pt-16">
           <div className="mx-auto max-w-[1500px]">
             <p className="reveal-item section-label">01 / About</p>
             <div className="mt-8 grid gap-12 lg:grid-cols-[1.35fr_.65fr]">
@@ -229,7 +229,7 @@ export default function PortfolioHome() {
           </div>
         </section>
 
-        <section id="experience" className="reveal-section border-y border-white/10 px-5 py-28 md:px-10 md:py-36">
+        <section id="experience" className="reveal-section border-y border-white/10 px-5 py-20 md:px-10 md:py-24">
           <div className="mx-auto max-w-[1500px]">
             <p className="reveal-item section-label">02 / Experience</p>
             <div className="timeline-wrap relative mt-14">
@@ -246,7 +246,7 @@ export default function PortfolioHome() {
           </div>
         </section>
 
-        <section id="projects" className="projects-pin min-h-screen overflow-hidden bg-[#06080b] py-24 lg:flex lg:items-center">
+        <section id="projects" className="projects-pin min-h-screen overflow-hidden bg-[#06080b] py-16 lg:flex lg:items-center lg:py-20">
           <div className="w-full">
             <div className="mx-auto mb-10 max-w-[1500px] px-5 md:px-10">
               <p className="section-label">03 / Selected work</p>
@@ -275,7 +275,7 @@ export default function PortfolioHome() {
           </div>
         </section>
 
-        <section id="research" className="reveal-section px-5 py-28 md:px-10 md:py-40">
+        <section id="research" className="reveal-section px-5 py-20 md:px-10 md:py-24">
           <div className="mx-auto max-w-[1500px]">
             <p className="reveal-item section-label">04 / Research</p>
             <div className="mt-10 grid gap-14 lg:grid-cols-[.8fr_1.2fr]">
@@ -287,7 +287,7 @@ export default function PortfolioHome() {
           </div>
         </section>
 
-        <section id="skills" className="reveal-section border-y border-white/10 px-5 py-28 md:px-10 md:py-36">
+        <section id="skills" className="reveal-section border-y border-white/10 px-5 py-20 md:px-10 md:py-24">
           <div className="mx-auto max-w-[1500px]">
             <p className="reveal-item section-label">05 / Skills</p>
             <div className="mt-6 flex flex-col justify-between gap-5 border-b border-white/10 pb-7 lg:flex-row lg:items-end">
@@ -313,7 +313,7 @@ export default function PortfolioHome() {
           </div>
         </section>
 
-        <section className="reveal-section px-5 py-28 md:px-10 md:py-36">
+        <section className="reveal-section px-5 py-20 md:px-10 md:py-24">
           <div className="mx-auto max-w-[1500px]">
             <p className="reveal-item section-label">06 / Education</p>
             <div className="mt-12 grid gap-5 lg:grid-cols-2">
@@ -323,7 +323,7 @@ export default function PortfolioHome() {
           </div>
         </section>
 
-        <section id="contact" className="relative overflow-hidden border-t border-white/10 px-5 py-32 md:px-10 md:py-48">
+        <section id="contact" className="relative overflow-hidden border-t border-white/10 px-5 py-24 md:px-10 md:py-32">
           <div className="absolute inset-x-0 bottom-0 mx-auto h-72 max-w-5xl rounded-full bg-cyan-400/10 blur-[120px]" />
           <div className="relative mx-auto max-w-[1500px] text-center">
             <p className="section-label">07 / Contact</p>
