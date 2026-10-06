@@ -312,9 +312,21 @@ export const projects: Project[] = [
       "Applied anomaly-detection thinking to unusual sensor patterns and alerting scenarios.",
     ],
     highlights: ["Raspberry Pi / Arduino", "Cloud aggregation", "Live dashboard", "Anomaly detection", "Early-warning concept"],
-    architecture: ["Sensors", "Raspberry Pi / Arduino", "Python", "Azure IoT", "Dashboard"],
+    architecture: ["Environmental sensors", "Raspberry Pi / Arduino", "Python processing", "Azure IoT", "Cloud aggregation", "Monitoring dashboard"],
+    proofPoints: [
+      { label: "Edge hardware", value: "Raspberry Pi · Arduino", detail: "Physical sensor collection begins close to the environment rather than only in the cloud." },
+      { label: "Processing", value: "Python", detail: "Sensor readings are normalised and prepared before aggregation and visualisation." },
+      { label: "Cloud layer", value: "Azure IoT", detail: "Device data is forwarded into a cloud-oriented monitoring path for central access." },
+      { label: "Intelligence", value: "Anomaly detection", detail: "The project explores unusual-pattern detection as a basis for early-warning behaviour." },
+    ],
+    decisions: [
+      { title: "Separate sensing from cloud analysis", detail: "Raspberry Pi and Arduino handle device-facing collection while cloud services receive processed readings, keeping hardware interaction separate from monitoring and analysis." },
+      { title: "Use Python as the processing bridge", detail: "Python provides a flexible layer between raw sensor values and cloud ingestion, making preprocessing and anomaly-oriented logic easier to iterate." },
+      { title: "Aggregate before visualising", detail: "The dashboard consumes centralised readings rather than communicating directly with each sensor, producing a simpler monitoring interface and cleaner device boundaries." },
+      { title: "Treat anomaly detection as decision support", detail: "Unusual readings are used to flag conditions worth attention rather than being presented as guaranteed predictions of an environmental event." },
+    ],
     outcome:
-      "A practical IoT/AI project linking sensor hardware, cloud processing and intelligent monitoring concepts.",
+      "An end-to-end IoT monitoring prototype connecting physical sensors, edge processing, cloud aggregation and anomaly-oriented analysis into one observable pipeline.",
   },
   {
     slug: "nepaluk",
@@ -338,9 +350,21 @@ export const projects: Project[] = [
       "Supported ongoing feature implementation and maintenance.",
     ],
     highlights: ["Laravel backend", "Database workflows", "Community features", "E-commerce functionality"],
-    architecture: ["Browser", "Laravel", "MySQL", "Application services"],
+    architecture: ["Browser UI", "Laravel application", "Application services", "MySQL", "Community / commerce workflows"],
+    proofPoints: [
+      { label: "Platform type", value: "Community + Commerce", detail: "The application combines community-facing functionality with transactional and marketplace-style workflows." },
+      { label: "Backend", value: "Laravel · PHP", detail: "Core application logic and request handling are implemented in a conventional server-side web stack." },
+      { label: "Data", value: "MySQL", detail: "User, content and commerce-related workflows are backed by relational application data." },
+      { label: "Delivery", value: "Production maintenance", detail: "Work included ongoing feature implementation and support rather than a one-off static build." },
+    ],
+    decisions: [
+      { title: "Keep business rules on the server", detail: "Laravel centralises application and database rules so community and commerce behaviour is enforced consistently rather than relying on browser-only logic." },
+      { title: "Use relational data for connected workflows", detail: "MySQL suits account, content and commerce relationships where records need clear ownership and predictable joins." },
+      { title: "Build around reusable application services", detail: "Shared backend logic reduces duplication between different user-facing workflows and makes later maintenance safer." },
+      { title: "Optimise for an evolving production product", detail: "The implementation supports incremental feature work and maintenance, reflecting the needs of a live community platform rather than a fixed brochure site." },
+    ],
     outcome:
-      "Additional production web-development experience across backend logic, data and user-facing features.",
+      "Production experience on a Laravel community and commerce platform, covering backend logic, relational data and evolving user-facing workflows.",
   },
 
   {
@@ -694,9 +718,21 @@ export const projects: Project[] = [
       "Integrated cloud-hosted media workflows using Azure Blob Storage.",
     ],
     highlights: ["Omega client project", "Custom CMS", "Care-service pages", "Location SEO", "Enquiry forms", "Azure media storage"],
-    architecture: ["Next.js frontend", "Node.js APIs", "Custom CMS", "Azure Blob Storage", "Resend email", "SEO/local landing pages"],
+    architecture: ["Next.js frontend", "Node.js APIs", "Custom CMS", "Azure Blob Storage", "Resend email", "SEO / local landing pages"],
+    proofPoints: [
+      { label: "Audience", value: "Families · Applicants · Care users", detail: "The site serves service discovery, enquiry and recruitment journeys with different information needs." },
+      { label: "Content", value: "Custom CMS", detail: "Service, location, company, blog, FAQ and recruitment content can be managed without rebuilding page code." },
+      { label: "Lead flows", value: "Enquiry + Recruitment", detail: "Structured forms connect public pages to operational email workflows." },
+      { label: "Discoverability", value: "Local SEO pages", detail: "Location-focused landing pages support service discovery across different UK coverage areas." },
+    ],
+    decisions: [
+      { title: "Design for accessibility and trust", detail: "Care-service pages prioritise readable structure, clear calls to action and straightforward navigation because visitors may be older users or family members making important decisions." },
+      { title: "Make content editable by the organisation", detail: "A custom CMS separates day-to-day service, recruitment and information updates from developer deployments." },
+      { title: "Store media outside the application bundle", detail: "Azure Blob Storage provides a dedicated place for managed images and assets instead of coupling uploaded media to the deployed frontend." },
+      { title: "Connect forms directly to operations", detail: "Enquiry and recruitment submissions feed email workflows through Resend so user actions translate into actionable internal communication." },
+    ],
     outcome:
-      "A scalable care-services web platform delivered as part of Omega BPO client work, combining accessible UX, content management, enquiry generation and location-focused discoverability.",
+      "A production client platform combining accessible care-service UX, editable content, enquiry and recruitment journeys, cloud media storage and location-oriented discoverability.",
   },
 ];
 
