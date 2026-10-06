@@ -45,6 +45,18 @@ export default function ProjectCaseStudy({ project, nextProject }: { project: Pr
               <div className="lg:justify-self-end"><p className="text-xs uppercase tracking-[0.22em] text-white/35">My role</p><p className="mt-2 text-lg text-white/75">{project.role}</p>{project.href && <a href={project.href} target="_blank" rel="noreferrer" className="mt-5 inline-flex text-sm font-semibold text-cyan-300">Visit live project ↗</a>}</div>
             </div>
             <div className="case-visual mt-14"><ProjectVisual src={project.visual} name={project.name} href={project.href} priority /></div>
+
+            {project.proofPoints && (
+              <div className="case-reveal mt-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                {project.proofPoints.map((item) => (
+                  <div key={item.label} className="rounded-[1.4rem] border border-white/10 bg-white/[0.025] p-5 md:p-6">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-300/80">{item.label}</p>
+                    <p className="mt-3 text-xl font-medium tracking-[-0.025em] text-white md:text-2xl">{item.value}</p>
+                    <p className="mt-3 text-sm leading-6 text-white/45">{item.detail}</p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
 
@@ -64,13 +76,51 @@ export default function ProjectCaseStudy({ project, nextProject }: { project: Pr
 
         <section className="border-y border-white/10 bg-white/[0.015] px-5 py-24 md:px-10 md:py-32">
           <div className="mx-auto max-w-[1500px]">
-            <div className="case-reveal grid gap-10 lg:grid-cols-[.72fr_1.28fr]"><div><p className="section-label">Architecture</p><h2 className="mt-5 text-4xl font-medium tracking-[-0.04em]">System flow.</h2></div><div className="grid gap-3">{project.architecture.map((step, i) => <div key={step} className="flex items-center gap-5 border-b border-white/10 py-4 last:border-0"><span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-cyan-300 text-xs font-bold text-black">{i + 1}</span><span className="text-lg md:text-xl">{step}</span>{i < project.architecture.length - 1 && <span className="ml-auto text-white/25">→</span>}</div>)}</div></div>
+            <div className="case-reveal grid gap-12 lg:grid-cols-[.62fr_1.38fr]">
+              <div>
+                <p className="section-label">Architecture</p>
+                <h2 className="mt-5 text-4xl font-medium tracking-[-0.04em] md:text-5xl">How the system moves.</h2>
+                <p className="mt-6 max-w-md leading-7 text-white/45">A simplified view of the main runtime path, showing the engineering layers rather than implementation noise.</p>
+              </div>
+              <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                {project.architecture.map((step, i) => (
+                  <div key={step} className="relative min-h-36 overflow-hidden rounded-[1.4rem] border border-white/10 bg-[#090d12] p-5">
+                    <div className="flex items-center justify-between">
+                      <span className="grid h-8 w-8 place-items-center rounded-full bg-cyan-300 text-[11px] font-bold text-black">{String(i + 1).padStart(2, "0")}</span>
+                      {i < project.architecture.length - 1 && <span className="text-lg text-white/18">→</span>}
+                    </div>
+                    <p className="mt-8 text-lg font-medium tracking-[-0.02em] text-white/82">{step}</p>
+                    <div className="absolute inset-x-5 bottom-0 h-px bg-gradient-to-r from-cyan-300/50 to-transparent" />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {project.decisions && (
+              <div className="case-reveal mt-24 border-t border-white/10 pt-16">
+                <div className="grid gap-10 lg:grid-cols-[.62fr_1.38fr]">
+                  <div>
+                    <p className="section-label">Engineering decisions</p>
+                    <h2 className="mt-5 text-4xl font-medium tracking-[-0.04em] md:text-5xl">Why it was built this way.</h2>
+                  </div>
+                  <div className="grid gap-4 md:grid-cols-2">
+                    {project.decisions.map((decision, i) => (
+                      <div key={decision.title} className="rounded-[1.5rem] border border-white/10 p-6">
+                        <p className="text-xs font-bold tracking-[0.18em] text-cyan-300/75">{String(i + 1).padStart(2, "0")}</p>
+                        <h3 className="mt-4 text-xl font-medium tracking-[-0.025em]">{decision.title}</h3>
+                        <p className="mt-4 leading-7 text-white/52">{decision.detail}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </section>
 
         <section className="px-5 py-24 md:px-10 md:py-32">
           <div className="mx-auto max-w-[1500px]">
-            <div className="case-reveal grid gap-10 lg:grid-cols-2"><div><p className="section-label">Highlights</p><div className="mt-7 grid gap-3">{project.highlights.map((item) => <div key={item} className="rounded-2xl border border-white/10 p-5 text-lg text-white/68">{item}</div>)}</div></div><div className="rounded-[2rem] border border-cyan-300/20 bg-cyan-300/[0.04] p-8 md:p-10"><p className="section-label text-cyan-300">Outcome</p><p className="mt-7 text-2xl leading-10 text-white/78 md:text-3xl">{project.outcome}</p></div></div>
+            <div className="case-reveal grid gap-10 lg:grid-cols-2"><div><p className="section-label">Technical highlights</p><div className="mt-7 grid gap-3">{project.highlights.map((item) => <div key={item} className="rounded-2xl border border-white/10 p-5 text-lg text-white/68">{item}</div>)}</div></div><div className="rounded-[2rem] border border-cyan-300/20 bg-cyan-300/[0.04] p-8 md:p-10"><p className="section-label text-cyan-300">Result</p><p className="mt-7 text-2xl leading-10 text-white/78 md:text-3xl">{project.outcome}</p></div></div>
           </div>
         </section>
 
