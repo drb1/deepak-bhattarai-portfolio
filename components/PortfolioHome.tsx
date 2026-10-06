@@ -49,7 +49,14 @@ export default function PortfolioHome() {
         heroTl
           .from(".nav-reveal", { y: -24, opacity: 0, duration: 0.7 })
           .from(".hero-kicker", { y: 24, opacity: 0, duration: 0.55 }, "-=0.25")
-          .from(".hero-word", { yPercent: 105, opacity: 0, stagger: 0.08, duration: 0.78 }, "-=0.15")
+          .from(".hero-word", {
+            yPercent: 105,
+            opacity: 0,
+            stagger: 0.08,
+            duration: 0.78,
+            force3D: false,
+            clearProps: "transform,opacity",
+          }, "-=0.15")
           .from(".hero-copy", { y: 24, opacity: 0, duration: 0.6 }, "-=0.3")
           .from(".hero-action", { y: 14, opacity: 0, stagger: 0.06, duration: 0.45 }, "-=0.25")
           .from(".hero-tech-marquee", { y: 18, opacity: 0, duration: 0.55 }, "-=0.2");
