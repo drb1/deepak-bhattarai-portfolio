@@ -38,15 +38,27 @@ button, a { -webkit-tap-highlight-color: transparent; }
   mask-image: linear-gradient(to bottom, black 12%, transparent 92%);
 }
 
-.hero-word {
-  width: min(100%, 1200px);
+.hero-color-text {
+  display: inline-block;
+  line-height: inherit;
 }
 
-.hero-gradient-svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  overflow: visible;
+.hero-color-letter {
+  display: inline-block;
+  color: #67e8f9;
+  animation: hero-letter-color-wave 6.5s ease-in-out infinite;
+}
+
+.hero-color-space {
+  display: inline-block;
+  width: 0.28em;
+}
+
+@keyframes hero-letter-color-wave {
+  0%, 100% { color: #67e8f9; }
+  25% { color: #60a5fa; }
+  50% { color: #a78bfa; }
+  75% { color: #f0abfc; }
 }
 
 
@@ -126,14 +138,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (max-width: 767px) {
   .hero h1,
   .hero-word,
-  .hero-gradient-svg {
+  .hero-color-text,
+  .hero-color-letter {
     background: transparent !important;
     box-shadow: none !important;
     filter: none !important;
     text-shadow: none !important;
   }
 
-  .hero-word {
+  .hero-word,
+  .hero-color-letter {
     transform: none !important;
     will-change: auto !important;
   }
