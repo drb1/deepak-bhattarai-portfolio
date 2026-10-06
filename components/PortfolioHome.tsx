@@ -32,53 +32,19 @@ const heroTechnologies = [
 ];
 
 function AnimatedHeroText({ text }: { text: string }) {
-  const gradientId = `hero-gradient-${text.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
-
-  const palette = ["#67e8f9", "#60a5fa", "#a78bfa", "#f0abfc", "#22d3ee"];
-
   return (
-    <svg
-      className="hero-gradient-svg"
-      viewBox="0 0 1200 140"
-      role="img"
-      aria-label={text}
-      preserveAspectRatio="xMidYMid meet"
-    >
-      <defs>
-        <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
-          {palette.map((color, index) => {
-            const next = palette[(index + 1) % palette.length];
-            const next2 = palette[(index + 2) % palette.length];
-
-            return (
-              <stop key={color} offset={`${(index / (palette.length - 1)) * 100}%`} stopColor={color}>
-                <animate
-                  attributeName="stop-color"
-                  values={`${color};${next};${next2};${color}`}
-                  dur="8s"
-                  repeatCount="indefinite"
-                />
-              </stop>
-            );
-          })}
-        </linearGradient>
-      </defs>
-
-      <text
-        x="600"
-        y="108"
-        textAnchor="middle"
-        fill={`url(#${gradientId})`}
-        fontFamily="Arial, Helvetica, sans-serif"
-        fontSize="116"
-        fontWeight="700"
-        letterSpacing="-5"
-        textLength="1110"
-        lengthAdjust="spacingAndGlyphs"
-      >
-        {text}
-      </text>
-    </svg>
+    <span className="hero-color-text" aria-label={text}>
+      {text.split("").map((letter, index) => (
+        <span
+          key={`${letter}-${index}`}
+          aria-hidden="true"
+          className={letter === " " ? "hero-color-space" : "hero-color-letter"}
+          style={{ animationDelay: `${-index * 0.22}s` }}
+        >
+          {letter === " " ? "\u00A0" : letter}
+        </span>
+      ))}
+    </span>
   );
 }
 
@@ -216,7 +182,7 @@ export default function PortfolioHome() {
                     <AnimatedHeroText text="SOFTWARE ENGINEER" />
                   </span>
                 </h1>
-                <h1 className="mt-2 whitespace-nowrap bg-transparent text-[clamp(1.95rem,7vw,7.6rem)] font-semibold leading-[0.98] tracking-[-0.065em]">
+                <h1 className="mt-2 whitespace-nowrap text-[clamp(1.95rem,7vw,7.6rem)] font-semibold leading-[0.98] tracking-[-0.065em]">
                   <span className="hero-word inline-block">
                     <AnimatedHeroText text="BUILDING AI SYSTEMS" />
                   </span>
