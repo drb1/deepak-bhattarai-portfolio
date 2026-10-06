@@ -508,9 +508,21 @@ export const projects: Project[] = [
       "Implemented plan, package and payment-related flows including eSewa and Khalti integration screens.",
     ],
     highlights: ["Timed exams", "Practice & review", "Flashcards", "Analytics", "Multimedia learning", "Plan/payment flows"],
-    architecture: ["React Native", "Redux store", "REST APIs", "Test engine", "Content modules", "Payment flows"],
+    architecture: ["React Native UI", "Redux store", "REST APIs", "Test engine", "Learning content", "Plan / payment flows"],
+    proofPoints: [
+      { label: "Assessment", value: "Timed · Flag · Review · Submit", detail: "The mobile test engine supports a complete examination journey rather than simple question browsing." },
+      { label: "Learning modes", value: "Tests · Flashcards · Media", detail: "Assessment sits alongside articles, podcasts, video and revision-oriented content." },
+      { label: "State", value: "Redux", detail: "Cross-screen exam, account and content state is coordinated centrally across a dense mobile product." },
+      { label: "Commerce", value: "Plans · eSewa · Khalti", detail: "Subscription/package journeys are integrated into the same learning application." },
+    ],
+    decisions: [
+      { title: "Keep exam state outside individual screens", detail: "Timers, selected answers, flags and review state need to survive navigation, so Redux provides a shared source of truth for the test session." },
+      { title: "Separate the test engine from content modules", detail: "Assessment logic is kept distinct from flashcards, articles and multimedia so each learning mode can evolve without destabilising the others." },
+      { title: "Use reusable API utilities", detail: "Shared Axios-based request handling reduces repeated networking code across tests, dashboard data, content and account workflows." },
+      { title: "Treat payment as an access journey", detail: "Plan, package, eSewa and Khalti screens are connected to learning access rather than presented as isolated checkout UI." },
+    ],
     outcome:
-      "A substantial mobile education product demonstrating complex state management, exam UX and multi-module React Native development.",
+      "A multi-module mobile learning product combining a stateful examination engine, revision content, analytics and paid-access journeys in one React Native application.",
   },
   {
     slug: "seven-wonders-food-hub",
@@ -535,9 +547,21 @@ export const projects: Project[] = [
       "Structured and optimised extensive restaurant imagery and menu assets.",
     ],
     highlights: ["Menu discovery", "Daily specials", "Food gallery", "Reservation UI", "Responsive design", "Motion effects"],
-    architecture: ["Next.js", "Reusable UI components", "Static/media assets", "Reservation/contact flows"],
+    architecture: ["Next.js pages", "Reusable UI sections", "Menu / media assets", "Motion layer", "Reservation / contact CTAs"],
+    proofPoints: [
+      { label: "Primary journey", value: "Discover → Desire → Act", detail: "Menu, specials and imagery lead visitors toward ordering, reservation or contact actions." },
+      { label: "Visual content", value: "Menus · Specials · Gallery", detail: "Food and brand imagery are central to the customer experience rather than decorative extras." },
+      { label: "Frontend", value: "Next.js · Tailwind", detail: "Responsive layouts and reusable sections support a consistent restaurant brand across pages." },
+      { label: "Interaction", value: "Framer Motion · AOS", detail: "Motion is used to support visual hierarchy and presentation without replacing the core content." },
+    ],
+    decisions: [
+      { title: "Design around customer intent", detail: "The information architecture puts dishes, specials and actions ahead of company-heavy content because restaurant visitors typically want to decide what to eat and how to order quickly." },
+      { title: "Build reusable promotional sections", detail: "Banners, menu groups, chef content and highlights are componentised so seasonal or promotional content can change without restructuring pages." },
+      { title: "Optimise imagery as product content", detail: "Restaurant visuals are treated as a core part of the experience, requiring deliberate asset organisation and responsive presentation." },
+      { title: "Use motion to guide, not distract", detail: "Framer Motion and AOS enhance section transitions and emphasis while keeping ordering, reservation and menu content immediately accessible." },
+    ],
     outcome:
-      "A polished customer-facing restaurant experience demonstrating branded UI, responsive design and conversion-oriented frontend development.",
+      "A conversion-focused restaurant web experience combining strong visual presentation, reusable Next.js components and clear ordering, reservation and contact journeys.",
   },
   {
     slug: "top-luxury-property-mobile",
@@ -561,9 +585,21 @@ export const projects: Project[] = [
       "Added native splash/lifecycle handling and Android/iOS project configuration.",
     ],
     highlights: ["SPG client project", "Property portal", "React Native WebView", "Firebase messaging", "Device tokens", "Session integration"],
-    architecture: ["React Native shell", "WebView portal", "Firebase messaging", "Backend API integration"],
+    architecture: ["React Native shell", "WebView portal", "Cookie / session bridge", "Firebase messaging", "Device-token storage", "Backend APIs"],
+    proofPoints: [
+      { label: "Delivery model", value: "Web portal + Native shell", detail: "The existing property experience is preserved while mobile-specific capability is layered around it." },
+      { label: "Session continuity", value: "Cookies + WebView state", detail: "Authentication and browsing context are maintained when moving the browser-based portal into a native container." },
+      { label: "Notifications", value: "Firebase Messaging", detail: "The mobile layer can receive push events that are not available to the original browser experience in the same way." },
+      { label: "Device identity", value: "Persisted tokens", detail: "Device tokens and user context are stored and synchronised so backend notifications reach the correct installation." },
+    ],
+    decisions: [
+      { title: "Preserve the mature web product", detail: "Using a WebView avoids duplicating a functioning property portal while still providing an installable mobile experience." },
+      { title: "Make session handling explicit", detail: "Cookie and lifecycle handling are treated as first-class integration concerns because browser authentication does not automatically behave identically inside a native WebView." },
+      { title: "Synchronise native identity with the backend", detail: "Device-token persistence and WebView-to-native messaging connect the property account context to Firebase notification delivery." },
+      { title: "Keep the native layer focused", detail: "React Native handles splash, lifecycle, messaging and device integration while property browsing remains owned by the existing portal." },
+    ],
     outcome:
-      "A mobile delivery layer delivered as part of SPG Technologies client work, extending a web property platform with native app packaging and push-notification capabilities.",
+      "A pragmatic mobile extension of an existing property platform, adding native lifecycle and push-notification capability while preserving the established web experience.",
   },
 
   {
