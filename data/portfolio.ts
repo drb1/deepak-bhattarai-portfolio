@@ -194,9 +194,21 @@ export const projects: Project[] = [
       "Maintained deployment and performance while preserving previously fixed features during iterative updates.",
     ],
     highlights: ["Official-source automation", "Situation Room", "Missing-person data", "Caching & stale-data resilience", "Performance and regression debugging"],
-    architecture: ["Public sources", "Background workers", "FastAPI", "PostgreSQL", "Cache layer", "Next.js UI"],
+    architecture: ["Official public sources", "Background workers", "FastAPI", "PostgreSQL", "Cache / stale data", "Next.js UI"],
+    proofPoints: [
+      { label: "Data strategy", value: "Official sources first", detail: "Situation data is designed around authoritative public sources rather than a generic news feed." },
+      { label: "Resilience", value: "Cache · Timeout · Stale fallback", detail: "The platform preserves usable information when upstream services are slow or temporarily unavailable." },
+      { label: "Public workflows", value: "Situation · Missing people · Transparency", detail: "Multiple public-information workflows are surfaced through one consistent application." },
+      { label: "Automation", value: "Background update workers", detail: "Changing external information is ingested asynchronously instead of blocking user-facing requests." },
+    ],
+    decisions: [
+      { title: "Treat upstream services as unreliable", detail: "External disaster data can be slow, incomplete or temporarily unavailable, so the application uses timeouts, caching and previously verified values instead of assuming every request will succeed." },
+      { title: "Keep ingestion out of the request path", detail: "Background workers handle official-source updates so public pages can remain responsive even when source systems are slow." },
+      { title: "Preserve provenance and public trust", detail: "The platform prioritises official and verified sources for situation and funding information, reducing the risk of presenting unverified claims as operational data." },
+      { title: "Design for partial availability", detail: "Situation, missing-person and transparency features are separated enough that one failing source does not need to make the entire public platform unusable." },
+    ],
     outcome:
-      "A resilience-focused public-information system designed to remain useful even when external data sources are imperfect or slow.",
+      "A public-information system engineered for imperfect upstream conditions, with automation and fallback behaviour designed to keep critical pages useful during changing situations.",
   },
   {
     slug: "wizam",
@@ -222,9 +234,21 @@ export const projects: Project[] = [
       "Resolved production bugs and improved existing user and administrator flows.",
     ],
     highlights: ["Exam workflows", "Stripe subscriptions & one-off payments", "Access control", "Admin tooling", "Transactional emails"],
-    architecture: ["React / Next.js", "Laravel", "MySQL", "Stripe", "Email workflows"],
+    architecture: ["React / Next.js", "Laravel API", "MySQL", "Stripe", "Access rules", "Email workflows"],
+    proofPoints: [
+      { label: "Commerce", value: "Subscription + one-off", detail: "Stripe supports both recurring access and individual purchase flows." },
+      { label: "Core workflow", value: "Mock tests · Exams", detail: "Learners move from paid access into assigned or available assessment experiences." },
+      { label: "Control", value: "Payment-aware access", detail: "Exam availability is linked to verified entitlement rather than only front-end state." },
+      { label: "Operations", value: "Admin · Email · Support", detail: "The platform includes the operational tooling needed to run a live commercial learning product." },
+    ],
+    decisions: [
+      { title: "Separate payment from entitlement", detail: "A successful checkout is not treated as the entire access model; payment verification feeds explicit exam-access rules so commercial state stays consistent." },
+      { title: "Support two purchase patterns", detail: "Subscriptions and one-off payments are handled as distinct commercial flows because users may need either ongoing access or a specific purchase." },
+      { title: "Keep admin workflows first-class", detail: "Assignments, access, FAQs and operational actions are managed through administrative tooling rather than relying on manual database changes." },
+      { title: "Use transactional communication as part of the workflow", detail: "Email notifications support payment, account and exam journeys so users receive feedback when state changes." },
+    ],
     outcome:
-      "Commercial platform work demonstrating end-to-end development across payments, access control, administration and production maintenance.",
+      "A live commercial assessment platform combining exam delivery, Stripe payments, entitlement logic and administration into one maintainable product workflow.",
   },
   {
     slug: "jodinee",
