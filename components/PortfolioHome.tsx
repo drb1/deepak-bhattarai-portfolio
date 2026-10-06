@@ -257,7 +257,7 @@ export default function PortfolioHome() {
             </div>
             <div ref={projectTrack} className="project-track flex w-max gap-5 px-5 md:px-10">
               {featuredProjects.map((project) => (
-                <Link key={project.name} href={`/projects/${project.slug}`} className="project-card group flex h-[660px] w-[88vw] max-w-[690px] shrink-0 flex-col rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.025] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/20 hover:bg-white/[0.06] md:p-7">
+                <Link key={project.name} href={`/projects/${project.slug}`} className="project-card group flex h-auto min-h-0 w-[88vw] max-w-[690px] shrink-0 flex-col rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.025] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/20 hover:bg-white/[0.06] md:p-7 lg:h-[660px]">
                   <div className="mb-6 flex items-start justify-between"><span className="text-sm text-cyan-300">{project.index}</span><span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/45">{project.type}</span></div>
                   <ProjectVisual src={project.visual} name={project.name} href={project.href} priority />
                   <div className="mt-7 flex flex-1 flex-col justify-between">
@@ -266,7 +266,7 @@ export default function PortfolioHome() {
                   </div>
                 </Link>
               ))}
-              <Link href="/projects" className="project-card group flex h-[660px] w-[70vw] max-w-[440px] shrink-0 flex-col items-center justify-center rounded-[2rem] border border-dashed border-white/15 bg-white/[0.02] p-10 text-center hover:bg-white/[0.04]">
+              <Link href="/projects" className="project-card group flex h-auto min-h-[320px] w-[70vw] max-w-[440px] shrink-0 flex-col items-center justify-center rounded-[2rem] border border-dashed border-white/15 bg-white/[0.02] p-10 text-center hover:bg-white/[0.04] lg:h-[660px]">
                 <span className="text-sm uppercase tracking-[0.22em] text-cyan-300">More work</span>
                 <span className="mt-5 text-4xl font-medium tracking-[-0.04em]">View all projects</span>
                 <span className="mt-8 text-3xl transition-transform group-hover:translate-x-2">→</span>
