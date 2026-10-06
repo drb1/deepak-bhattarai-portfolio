@@ -1,3 +1,5 @@
+export type ProjectCategory = "AI/ML" | "Full Stack" | "Mobile" | "Backend" | "Research";
+
 export type Project = {
   slug: string;
   index: string;
@@ -11,6 +13,7 @@ export type Project = {
   period: string;
   role: string;
   featured: boolean;
+  categories: ProjectCategory[];
   challenge: string;
   contribution: string[];
   highlights: string[];
@@ -99,6 +102,7 @@ export const projects: Project[] = [
     period: "2026 — Present",
     role: "Freelance AI & Full-Stack Developer",
     featured: true,
+    categories: ["AI/ML", "Full Stack", "Backend"],
     challenge:
       "Create one coherent platform for lessons, assessments, teachers, students, audio, live classes and AI-assisted marking while keeping deterministic question types reliable and the backend maintainable.",
     contribution: [
@@ -144,6 +148,7 @@ export const projects: Project[] = [
     period: "2024 — 2025",
     role: "MSc Artificial Intelligence Researcher",
     featured: true,
+    categories: ["AI/ML", "Research"],
     challenge:
       "Recognise behaviour from short video sequences rather than isolated frames while keeping inference efficient enough for a real-time prototype.",
     contribution: [
@@ -184,6 +189,7 @@ export const projects: Project[] = [
     period: "2026 — Present",
     role: "Full-Stack Developer",
     featured: true,
+    categories: ["Full Stack", "Backend"],
     challenge:
       "Keep public-facing disaster information useful and responsive when upstream sources are slow, inconsistent or updated on different schedules.",
     contribution: [
@@ -224,6 +230,7 @@ export const projects: Project[] = [
     period: "Professional Project",
     role: "Full-Stack / PHP Developer",
     featured: true,
+    categories: ["Full Stack", "Backend"],
     challenge:
       "Coordinate paid exam access, user assignments and administrative workflows reliably across a live learning platform.",
     contribution: [
@@ -264,6 +271,7 @@ export const projects: Project[] = [
     period: "Professional Project",
     role: "Mobile / Full-Stack Developer",
     featured: false,
+    categories: ["Full Stack", "Mobile", "Backend"],
     challenge:
       "Build a multi-step social product where identity, discovery, interaction and messaging flows stay coherent across a mobile client and backend services.",
     contribution: [
@@ -303,6 +311,7 @@ export const projects: Project[] = [
     period: "Academic / Technical Project",
     role: "AI / IoT Developer",
     featured: false,
+    categories: ["AI/ML", "Research"],
     challenge:
       "Connect physical sensor collection to cloud-based monitoring and identify unusual patterns that could support early-warning use cases.",
     contribution: [
@@ -342,6 +351,7 @@ export const projects: Project[] = [
     period: "Professional Project",
     role: "Web Developer",
     featured: false,
+    categories: ["Full Stack", "Backend"],
     challenge:
       "Support user-facing community and commerce features through maintainable backend application and database workflows.",
     contribution: [
@@ -381,6 +391,7 @@ export const projects: Project[] = [
     period: "Personal Project",
     role: "Full-Stack Developer",
     featured: false,
+    categories: ["Full Stack", "Backend"],
     challenge:
       "Create a content platform that supports both a polished public reading experience and practical editorial workflows without maintaining a separate CMS product.",
     contribution: [
@@ -420,6 +431,7 @@ export const projects: Project[] = [
     period: "Mobile Project",
     role: "React Native Developer",
     featured: false,
+    categories: ["Mobile"],
     challenge:
       "Organise many content and service areas into a maintainable mobile experience while supporting bilingual content and API-driven updates.",
     contribution: [
@@ -459,6 +471,7 @@ export const projects: Project[] = [
     period: "SPG Technologies · Client Project",
     role: "Software / React Native Developer",
     featured: false,
+    categories: ["Mobile"],
     challenge:
       "Bridge an existing web application with native mobile capabilities while handling modern permission rules, background-location disclosure and actionable push notifications.",
     contribution: [
@@ -498,6 +511,7 @@ export const projects: Project[] = [
     period: "SPG Technologies · Client Project",
     role: "Software / React Native Developer",
     featured: false,
+    categories: ["Mobile"],
     challenge:
       "Deliver a dense learning and examination product on mobile while keeping test state, timers, navigation, payments and account workflows consistent.",
     contribution: [
@@ -537,6 +551,7 @@ export const projects: Project[] = [
     period: "Web Project",
     role: "Frontend / Full-Stack Developer",
     featured: false,
+    categories: ["Full Stack"],
     challenge:
       "Present a large food catalogue and restaurant brand in a visually engaging way while keeping the site responsive and conversion-focused.",
     contribution: [
@@ -576,6 +591,7 @@ export const projects: Project[] = [
     period: "Professional Mobile Project",
     role: "React Native Developer",
     featured: false,
+    categories: ["Mobile"],
     challenge:
       "Turn an existing browser-based property platform into a reliable mobile application while preserving session behaviour and integrating native notification services.",
     contribution: [
@@ -616,6 +632,7 @@ export const projects: Project[] = [
     period: "School of Dental Nursing · UK",
     role: "Full-Stack / PHP Developer",
     featured: false,
+    categories: ["Full Stack", "Backend"],
     challenge:
       "Build a content-rich learning platform where dental-nursing resources remain easy to discover, edit and publish while supporting search, SEO and scalable content organisation.",
     contribution: [
@@ -657,6 +674,7 @@ export const projects: Project[] = [
     period: "School of Dental Nursing · UK",
     role: "PHP / Laravel Developer",
     featured: false,
+    categories: ["Full Stack", "Backend"],
     challenge:
       "Support reliable communication between recruiters, job seekers and administrators while keeping messages, attachments and transactional notifications tied to the correct account and job context.",
     contribution: [
@@ -698,6 +716,7 @@ export const projects: Project[] = [
     period: "Omega BPO Outsourcing",
     role: "Mid-Level Developer",
     featured: false,
+    categories: ["Full Stack", "Backend"],
     challenge:
       "Translate a broad BPO service catalogue into a responsive corporate experience with strong visual presentation, reusable sections and practical lead/contact workflows.",
     contribution: [
@@ -737,6 +756,7 @@ export const projects: Project[] = [
     period: "Omega BPO Outsourcing",
     role: "Mid-Level Developer / Frontend Developer",
     featured: false,
+    categories: [],
     challenge:
       "Rapidly explore and communicate a new visual direction for a corporate site before committing to a full production redesign.",
     contribution: [
@@ -775,6 +795,7 @@ export const projects: Project[] = [
     period: "SPG Technologies · Client Project",
     role: "Software / React Native Developer",
     featured: false,
+    categories: ["Mobile"],
     challenge:
       "Deliver mobile access to an existing CRM for different user groups while preserving web sessions and adding location and notification capabilities where needed.",
     contribution: [
@@ -815,6 +836,7 @@ export const projects: Project[] = [
     period: "Omega BPO Outsourcing · Client Project",
     role: "Mid-Level Developer / Project Contributor",
     featured: false,
+    categories: ["Full Stack", "Backend"],
     challenge:
       "Create an accessible, trustworthy and content-manageable care-services website that works well for families, older users and recruitment visitors while supporting strong local search visibility.",
     contribution: [
