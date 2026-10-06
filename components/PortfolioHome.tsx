@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, type CSSProperties } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,6 +13,23 @@ import ProjectVisual from "@/components/ProjectVisual";
 import Footer from "@/components/Footer";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+function AnimatedHeroText({ text }: { text: string }) {
+  return (
+    <span className="hero-gradient-text" aria-label={text}>
+      {text.split("").map((letter, index) => (
+        <span
+          key={`${letter}-${index}`}
+          aria-hidden="true"
+          className={letter === " " ? "hero-gradient-space" : "hero-gradient-letter"}
+          style={{ "--letter-index": index } as CSSProperties}
+        >
+          {letter === " " ? "\u00A0" : letter}
+        </span>
+      ))}
+    </span>
+  );
+}
 
 export default function PortfolioHome() {
   const root = useRef<HTMLDivElement>(null);
@@ -122,44 +139,36 @@ export default function PortfolioHome() {
           <div className="hero-orb-a absolute -left-20 top-24 h-72 w-72 rounded-full bg-cyan-400/15 blur-3xl" />
           <div className="hero-orb-b absolute -right-24 bottom-10 h-96 w-96 rounded-full bg-blue-500/15 blur-3xl" />
           <div className="relative z-10 mx-auto flex w-full max-w-[1500px] flex-col justify-end">
-            <div className="hero-kicker mb-6 flex flex-wrap items-center gap-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-300">{profile.location} · Software Engineer · Applied AI</p>
-              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-300/[0.06] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-emerald-200">
+            <div className="hero-kicker mb-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/48">
+                {profile.name} · {profile.location}
+              </p>
+              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-300/[0.06] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-emerald-200">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
-                {profile.availability}
+                Open to Software Engineering & Applied AI
               </span>
             </div>
 
-            <h1 className="overflow-hidden text-[13vw] font-semibold leading-[0.82] tracking-[-0.07em] md:text-[8.6vw]">
-              <span className="hero-word inline-block">SOFTWARE ENGINEER</span>
-            </h1>
-            <h1 className="overflow-hidden text-[13vw] font-semibold leading-[0.88] tracking-[-0.07em] text-white/28 md:text-[8.6vw]">
-              <span className="hero-word inline-block">BUILDING PRODUCTION AI.</span>
-            </h1>
-
-            <div className="mt-10 grid gap-8 border-t border-white/12 pt-7 md:grid-cols-[1.25fr_.75fr]">
-              <div>
-                <p className="hero-copy text-sm font-semibold uppercase tracking-[0.2em] text-white/38">{profile.name} · {profile.title}</p>
-                <p className="hero-copy mt-4 max-w-3xl text-xl leading-relaxed text-white/78 md:text-2xl">{profile.intro}</p>
-              </div>
-              <div className="flex flex-wrap items-start gap-3 md:justify-end">
-                <a className="hero-action primary-btn" href="#projects">View flagship work</a>
-                <a className="hero-action secondary-btn" href={profile.cv} download>Download CV</a>
-              </div>
+            <div className="max-w-[1240px]">
+              <h1 className="overflow-hidden whitespace-nowrap text-[clamp(1.75rem,6.1vw,7rem)] font-semibold leading-[0.94] tracking-[-0.06em]">
+                <span className="hero-word inline-block">
+                  <AnimatedHeroText text="SOFTWARE ENGINEER" />
+                </span>
+              </h1>
+              <h1 className="mt-2 overflow-hidden whitespace-nowrap text-[clamp(1.75rem,6.1vw,7rem)] font-semibold leading-[0.98] tracking-[-0.06em]">
+                <span className="hero-word inline-block">
+                  <AnimatedHeroText text="BUILDING AI SYSTEMS" />
+                </span>
+              </h1>
             </div>
 
-            <div className="hero-copy mt-8 grid overflow-hidden rounded-2xl border border-white/10 bg-black/20 backdrop-blur-sm sm:grid-cols-3">
-              <div className="border-b border-white/10 px-5 py-4 sm:border-b-0 sm:border-r">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-white/30">Engineering</p>
-                <p className="mt-1 text-sm font-semibold text-white/78">9+ years · Web · Mobile · Backend</p>
-              </div>
-              <div className="border-b border-white/10 px-5 py-4 sm:border-b-0 sm:border-r">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-white/30">AI foundation</p>
-                <p className="mt-1 text-sm font-semibold text-white/78">MSc Artificial Intelligence · Distinction</p>
-              </div>
-              <div className="px-5 py-4">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-white/30">Current focus</p>
-                <p className="mt-1 text-sm font-semibold text-cyan-300">Applied AI · Production systems</p>
+            <div className="mt-10 flex flex-col gap-6 border-t border-white/12 pt-7 lg:flex-row lg:items-center lg:justify-between">
+              <p className="hero-copy max-w-3xl text-base leading-7 text-white/62 md:text-lg">
+                9+ years across web, mobile and backend engineering · MSc Artificial Intelligence with Distinction
+              </p>
+              <div className="flex flex-wrap gap-3 lg:justify-end">
+                <a className="hero-action primary-btn" href="#projects">View flagship work</a>
+                <a className="hero-action secondary-btn" href={profile.cv} download>Download CV</a>
               </div>
             </div>
           </div>
