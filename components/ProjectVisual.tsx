@@ -13,12 +13,15 @@ export default function ProjectVisual({
 }) {
   const domain = href ? new URL(href).hostname.replace(/^www\./, "") : null;
   const isSvg = src.toLowerCase().endsWith(".svg");
-  const imageClass =
+  const isScreenshot = src.toLowerCase().includes("-screenshot.");
+  const artClass =
     "aspect-[1200/760] w-full object-cover pt-9 transition-transform duration-700 ease-out group-hover:scale-[1.018]";
+  const screenshotClass =
+    "block h-auto w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.012]";
 
   return (
     <div className="project-visual relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0b0f14]">
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex h-9 items-center gap-1.5 border-b border-white/[0.06] bg-black/20 px-4 backdrop-blur-sm">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex h-9 items-center gap-1.5 border-b border-white/[0.06] bg-black/70 px-4 backdrop-blur-sm">
         <span className="h-2 w-2 rounded-full bg-white/20" />
         <span className="h-2 w-2 rounded-full bg-white/15" />
         <span className="h-2 w-2 rounded-full bg-white/10" />
@@ -32,13 +35,25 @@ export default function ProjectVisual({
         )}
       </div>
 
-      {isSvg ? (
+      {isScreenshot ? (
+        <div className="bg-white pt-9">
+          <img
+            src={src}
+            alt={`${name} real project screenshot`}
+            width={2048}
+            height={960}
+            className={screenshotClass}
+            loading={priority ? "eager" : "lazy"}
+            decoding="async"
+          />
+        </div>
+      ) : isSvg ? (
         <img
           src={src}
           alt={`${name} project visual`}
           width={1200}
           height={760}
-          className={imageClass}
+          className={artClass}
           loading={priority ? "eager" : "lazy"}
           decoding="async"
         />
@@ -48,12 +63,14 @@ export default function ProjectVisual({
           alt={`${name} project visual`}
           width={1200}
           height={760}
-          className={imageClass}
+          className={artClass}
           priority={priority}
         />
       )}
 
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-white/[0.02]" />
+      {!isScreenshot && (
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-white/[0.02]" />
+      )}
     </div>
   );
 }
