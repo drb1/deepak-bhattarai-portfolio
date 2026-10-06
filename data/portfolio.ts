@@ -708,9 +708,21 @@ export const projects: Project[] = [
       "Integrated supporting UI libraries, mapping and cookie-consent behaviour.",
     ],
     highlights: ["Corporate multi-page site", "Service catalogue", "Case studies", "Contact/email workflows", "Responsive UI", "Rich media"],
-    architecture: ["Next.js pages", "Reusable React components", "API/contact route", "Email services", "Media assets"],
+    architecture: ["Next.js pages", "Reusable React sections", "Contact/API route", "SendGrid / Nodemailer", "Maps / media assets"],
+    proofPoints: [
+      { label: "Site scope", value: "Services · Talent · Case studies", detail: "The platform presents multiple business capabilities through a coherent corporate information architecture." },
+      { label: "Lead generation", value: "Contact + Email workflows", detail: "User enquiries move from public forms into server-side communication rather than ending as static UI." },
+      { label: "Frontend", value: "Next.js · React", detail: "Reusable sections support consistent delivery across company, service and supporting pages." },
+      { label: "Experience", value: "Responsive · Motion · Maps", detail: "Navigation, animation, media and location content are integrated into the broader corporate presentation." },
+    ],
+    decisions: [
+      { title: "Componentise repeated corporate sections", detail: "Benefits, testimonials, case studies and process content are built as reusable sections so new pages can share structure without copy-pasting presentation logic." },
+      { title: "Keep contact handling server-side", detail: "Email delivery through SendGrid and Nodemailer is triggered from application routes rather than exposing mail credentials or business logic in the browser." },
+      { title: "Use motion as supporting hierarchy", detail: "AOS and interactive presentation are applied to reinforce section structure without making the site dependent on animation to communicate core information." },
+      { title: "Design for service discovery", detail: "The information architecture separates service areas, company evidence and contact actions so visitors can understand capability before entering a lead flow." },
+    ],
     outcome:
-      "A full corporate marketing platform showing production frontend work, reusable component design and lead-generation flows.",
+      "A production corporate web platform combining reusable frontend architecture, service discovery, rich presentation and practical lead-generation workflows.",
   },
   {
     slug: "omega-bpo-wireframe",
@@ -734,9 +746,21 @@ export const projects: Project[] = [
       "Used Tailwind CSS and Framer Motion to test modern spacing, typography and interaction patterns.",
     ],
     highlights: ["Design prototype", "Animated typography", "Framer Motion", "Tailwind design system", "Reusable UI atoms"],
-    architecture: ["Next.js", "Atomic UI elements", "Section components", "Framer Motion"],
+    architecture: ["Next.js prototype", "Atomic UI elements", "Section components", "Tailwind system", "Framer Motion"],
+    proofPoints: [
+      { label: "Purpose", value: "Pre-production exploration", detail: "The prototype tests a new visual direction without destabilising the live corporate website." },
+      { label: "Design system", value: "Tailwind + Reusable atoms", detail: "Spacing, typography and interaction patterns are explored through composable UI primitives." },
+      { label: "Motion", value: "Framer Motion", detail: "Animated words, characters and section transitions are prototyped as part of the interaction language." },
+      { label: "Coverage", value: "Hero · Services · Process · Company", detail: "The concept spans the major corporate storytelling areas rather than a single isolated screen." },
+    ],
+    decisions: [
+      { title: "Prototype separately from production", detail: "A standalone Next.js concept allows more aggressive visual experimentation without risking regressions in the existing corporate site." },
+      { title: "Test a system, not just a hero screen", detail: "Reusable atoms and section components help validate whether the proposed visual language can scale across the full site." },
+      { title: "Use motion as a design variable", detail: "Framer Motion is used early in the prototype so timing, hierarchy and animated typography can be evaluated alongside layout rather than added at the end." },
+      { title: "Keep implementation close to production technology", detail: "Using Next.js and TypeScript makes successful prototype patterns easier to carry into a future production redesign." },
+    ],
     outcome:
-      "A focused interaction prototype demonstrating rapid UI experimentation and modern frontend motion/design work.",
+      "A reusable interaction prototype that de-risks a corporate redesign by testing typography, motion, layout and component patterns before production implementation.",
   },
   {
     slug: "north-india-compressors-mobile",
@@ -761,9 +785,21 @@ export const projects: Project[] = [
       "Configured splash screens, native Android/iOS projects and session/cookie behaviour.",
     ],
     highlights: ["SPG client project", "Admin & customer apps", "CRM WebView", "Firebase messaging", "Geolocation", "Device-token sync"],
-    architecture: ["React Native shells", "CRM WebViews", "Firebase", "Location services", "Backend APIs"],
+    architecture: ["Admin / customer RN shells", "Authenticated CRM WebViews", "Session bridge", "Firebase messaging", "Location services", "Backend APIs"],
+    proofPoints: [
+      { label: "Applications", value: "Admin/Member + Customer", detail: "Separate mobile shells serve different CRM user groups rather than forcing one interface onto every role." },
+      { label: "Integration", value: "Authenticated WebView", detail: "The existing CRM remains the core business interface while native apps preserve session-aware access." },
+      { label: "Native services", value: "Location + Push", detail: "Geolocation and Firebase Messaging extend the CRM with device capabilities unavailable in the original web experience." },
+      { label: "Device sync", value: "Tokens + Backend updates", detail: "Mobile installation and location context are synchronised with server-side CRM records." },
+    ],
+    decisions: [
+      { title: "Split role-specific mobile experiences", detail: "Admin/member and customer users have different CRM needs, so separate applications keep navigation and native capability aligned with each audience." },
+      { title: "Preserve the existing CRM", detail: "Authenticated WebViews reuse established business workflows while React Native focuses on packaging, device integration and mobile lifecycle concerns." },
+      { title: "Add native capability only where it adds value", detail: "Location tracking and push messaging are introduced for relevant users without duplicating the entire CRM feature set in native code." },
+      { title: "Synchronise session and device identity", detail: "Cookie handling, stored identifiers and backend token updates keep CRM authentication and native notification state connected." },
+    ],
     outcome:
-      "Two role-specific mobile applications delivered as part of SPG Technologies client work, extending an existing business CRM with practical native integrations.",
+      "Two role-specific React Native applications extending an existing CRM with session-aware mobile access, geolocation and push-notification capabilities.",
   },
   {
     slug: "htr-care",
