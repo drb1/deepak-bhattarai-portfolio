@@ -38,28 +38,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
   mask-image: linear-gradient(to bottom, black 12%, transparent 92%);
 }
 
-.hero-gradient-line {
-  display: inline-block;
-  background: linear-gradient(
-    110deg,
-    #67e8f9 0%,
-    #60a5fa 24%,
-    #a78bfa 50%,
-    #f0abfc 74%,
-    #22d3ee 100%
-  );
-  background-size: 240% 100%;
-  background-position: 0% 50%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: hero-gradient-flow 8s ease-in-out infinite;
+.hero-word {
+  width: min(100%, 1200px);
 }
 
-@keyframes hero-gradient-flow {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+.hero-gradient-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
 }
 
 
@@ -139,8 +126,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (max-width: 767px) {
   .hero h1,
   .hero-word,
-  .hero-gradient-line {
-    background-color: transparent !important;
+  .hero-gradient-svg {
+    background: transparent !important;
     box-shadow: none !important;
     filter: none !important;
     text-shadow: none !important;
