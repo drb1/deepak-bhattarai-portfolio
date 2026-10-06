@@ -62,7 +62,7 @@ export default function PortfolioHome() {
         heroTl
           .from(".nav-reveal", { y: -24, opacity: 0, duration: 0.7 })
           .from(".hero-kicker", { y: 24, opacity: 0, duration: 0.55 }, "-=0.25")
-          .from(".hero-gradient-letter", { yPercent: 115, opacity: 0, stagger: 0.018, duration: 0.72 }, "-=0.15")
+          .from(".hero-word", { yPercent: 105, opacity: 0, stagger: 0.08, duration: 0.78 }, "-=0.15")
           .from(".hero-copy", { y: 24, opacity: 0, duration: 0.6 }, "-=0.3")
           .from(".hero-action", { y: 14, opacity: 0, stagger: 0.06, duration: 0.45 }, "-=0.25")
           .from(".hero-tech-marquee", { y: 18, opacity: 0, duration: 0.55 }, "-=0.2");
@@ -152,7 +152,7 @@ export default function PortfolioHome() {
       <SiteHeader />
 
       <main>
-        <section ref={hero} id="top" className="hero relative flex min-h-screen overflow-hidden px-5 pb-0 pt-28 md:px-10 md:pt-28">
+        <section ref={hero} id="top" className="hero relative flex min-h-[88svh] overflow-hidden px-5 pb-0 pt-24 sm:min-h-[92svh] md:min-h-screen md:px-10 md:pt-28">
           <div className="hero-grid absolute inset-0 opacity-45" />
           <div className="hero-orb-a absolute -left-20 top-24 h-72 w-72 rounded-full bg-cyan-400/15 blur-3xl" />
           <div className="hero-orb-b absolute -right-24 bottom-10 h-96 w-96 rounded-full bg-blue-500/15 blur-3xl" />
@@ -168,7 +168,7 @@ export default function PortfolioHome() {
               </span>
             </div>
 
-            <div className="flex flex-col items-center justify-center py-10 text-center md:py-14">
+            <div className="flex flex-col items-center justify-center py-6 text-center sm:py-8 md:py-14">
               <div className="w-full">
                 <h1 className="overflow-hidden whitespace-nowrap text-[clamp(1.95rem,7vw,7.6rem)] font-semibold leading-[0.94] tracking-[-0.065em]">
                   <span className="hero-word inline-block">
@@ -182,16 +182,16 @@ export default function PortfolioHome() {
                 </h1>
               </div>
 
-              <p className="hero-copy mt-7 max-w-3xl text-sm leading-6 text-white/52 md:text-base">
+              <p className="hero-copy mt-5 max-w-3xl text-sm leading-6 text-white/52 md:mt-7 md:text-base">
                 9+ years across web, mobile and backend engineering · MSc Artificial Intelligence with Distinction
               </p>
-              <div className="mt-6 flex flex-wrap justify-center gap-3">
+              <div className="mt-4 flex flex-wrap justify-center gap-3 md:mt-6">
                 <a className="hero-action primary-btn" href="#projects">View flagship work</a>
                 <a className="hero-action secondary-btn" href={profile.cv} download>Download CV</a>
               </div>
             </div>
 
-            <div className="hero-tech-marquee tech-marquee -mx-5 border-t border-white/10 py-5 md:-mx-10" aria-label="Core technologies">
+            <div className="hero-tech-marquee tech-marquee -mx-5 border-t border-white/10 py-3.5 md:-mx-10 md:py-5" aria-label="Core technologies">
               <div className="tech-marquee-track">
                 {[0, 1].map((copy) => (
                   <div key={copy} className="tech-marquee-group" aria-hidden={copy === 1}>
