@@ -32,20 +32,7 @@ const heroTechnologies = [
 ];
 
 function AnimatedHeroText({ text }: { text: string }) {
-  return (
-    <span className="hero-gradient-text" aria-label={text}>
-      {text.split("").map((letter, index) => (
-        <span
-          key={`${letter}-${index}`}
-          aria-hidden="true"
-          className={letter === " " ? "hero-gradient-space" : "hero-gradient-letter"}
-          style={{ animationDelay: `${-index * 0.18}s` }}
-        >
-          {letter === " " ? "\u00A0" : letter}
-        </span>
-      ))}
-    </span>
-  );
+  return <span className="hero-gradient-line">{text}</span>;
 }
 
 export default function PortfolioHome() {
