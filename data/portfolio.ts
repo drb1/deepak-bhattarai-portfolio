@@ -15,8 +15,8 @@ export type Project = {
   contribution: string[];
   highlights: string[];
   architecture: string[];
-  proofPoints?: { label: string; value: string; detail: string }[];
-  decisions?: { title: string; detail: string }[];
+  proofPoints: { label: string; value: string; detail: string }[];
+  decisions: { title: string; detail: string }[];
   outcome: string;
 };
 
@@ -349,8 +349,8 @@ export const projects: Project[] = [
       "Worked on database workflows and user-facing functionality.",
       "Supported ongoing feature implementation and maintenance.",
     ],
-    highlights: ["Laravel backend", "Database workflows", "Community features", "E-commerce functionality"],
-    architecture: ["Browser UI", "Laravel application", "Application services", "MySQL", "Community / commerce workflows"],
+    highlights: ["Laravel backend", "Database workflows", "Community features", "E-commerce functionality", "Production maintenance"],
+    architecture: ["Browser UI", "Laravel application", "Application services", "MySQL", "Community features", "Commerce workflows"],
     proofPoints: [
       { label: "Platform type", value: "Community + Commerce", detail: "The application combines community-facing functionality with transactional and marketplace-style workflows." },
       { label: "Backend", value: "Laravel · PHP", detail: "Core application logic and request handling are implemented in a conventional server-side web stack." },
@@ -547,7 +547,7 @@ export const projects: Project[] = [
       "Structured and optimised extensive restaurant imagery and menu assets.",
     ],
     highlights: ["Menu discovery", "Daily specials", "Food gallery", "Reservation UI", "Responsive design", "Motion effects"],
-    architecture: ["Next.js pages", "Reusable UI sections", "Menu / media assets", "Motion layer", "Reservation / contact CTAs"],
+    architecture: ["Next.js pages", "Reusable UI sections", "Menu data", "Media assets", "Motion layer", "Reservation / contact CTAs"],
     proofPoints: [
       { label: "Primary journey", value: "Discover → Desire → Act", detail: "Menu, specials and imagery lead visitors toward ordering, reservation or contact actions." },
       { label: "Visual content", value: "Menus · Specials · Gallery", detail: "Food and brand imagery are central to the customer experience rather than decorative extras." },
@@ -708,7 +708,7 @@ export const projects: Project[] = [
       "Integrated supporting UI libraries, mapping and cookie-consent behaviour.",
     ],
     highlights: ["Corporate multi-page site", "Service catalogue", "Case studies", "Contact/email workflows", "Responsive UI", "Rich media"],
-    architecture: ["Next.js pages", "Reusable React sections", "Contact/API route", "SendGrid / Nodemailer", "Maps / media assets"],
+    architecture: ["Next.js pages", "Reusable React sections", "Contact / API route", "SendGrid / Nodemailer", "Google Maps", "Media / consent layer"],
     proofPoints: [
       { label: "Site scope", value: "Services · Talent · Case studies", detail: "The platform presents multiple business capabilities through a coherent corporate information architecture." },
       { label: "Lead generation", value: "Contact + Email workflows", detail: "User enquiries move from public forms into server-side communication rather than ending as static UI." },
@@ -746,7 +746,7 @@ export const projects: Project[] = [
       "Used Tailwind CSS and Framer Motion to test modern spacing, typography and interaction patterns.",
     ],
     highlights: ["Design prototype", "Animated typography", "Framer Motion", "Tailwind design system", "Reusable UI atoms"],
-    architecture: ["Next.js prototype", "Atomic UI elements", "Section components", "Tailwind system", "Framer Motion"],
+    architecture: ["Next.js prototype", "Atomic UI elements", "Section components", "Tailwind system", "Framer Motion", "Prototype content flow"],
     proofPoints: [
       { label: "Purpose", value: "Pre-production exploration", detail: "The prototype tests a new visual direction without destabilising the live corporate website." },
       { label: "Design system", value: "Tailwind + Reusable atoms", detail: "Spacing, typography and interaction patterns are explored through composable UI primitives." },
