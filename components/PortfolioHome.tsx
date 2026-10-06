@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, type CSSProperties } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,6 +14,23 @@ import Footer from "@/components/Footer";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
+const heroTechnologies = [
+  { name: "Python", src: "https://cdn.simpleicons.org/python" },
+  { name: "TypeScript", src: "https://cdn.simpleicons.org/typescript" },
+  { name: "React", src: "https://cdn.simpleicons.org/react" },
+  { name: "Next.js", src: "https://cdn.simpleicons.org/nextdotjs/FFFFFF" },
+  { name: "FastAPI", src: "https://cdn.simpleicons.org/fastapi" },
+  { name: "PostgreSQL", src: "https://cdn.simpleicons.org/postgresql" },
+  { name: "Docker", src: "https://cdn.simpleicons.org/docker" },
+  { name: "TensorFlow", src: "https://cdn.simpleicons.org/tensorflow" },
+  { name: "OpenCV", src: "https://cdn.simpleicons.org/opencv" },
+  { name: "Laravel", src: "https://cdn.simpleicons.org/laravel" },
+  { name: "Node.js", src: "https://cdn.simpleicons.org/nodedotjs" },
+  { name: "Flutter", src: "https://cdn.simpleicons.org/flutter" },
+  { name: "GitHub", src: "https://cdn.simpleicons.org/github/FFFFFF" },
+  { name: "DigitalOcean", src: "https://cdn.simpleicons.org/digitalocean" },
+];
+
 function AnimatedHeroText({ text }: { text: string }) {
   return (
     <span className="hero-gradient-text" aria-label={text}>
@@ -22,7 +39,7 @@ function AnimatedHeroText({ text }: { text: string }) {
           key={`${letter}-${index}`}
           aria-hidden="true"
           className={letter === " " ? "hero-gradient-space" : "hero-gradient-letter"}
-          style={{ "--letter-index": index } as CSSProperties}
+          style={{ animationDelay: `${-index * 0.18}s` }}
         >
           {letter === " " ? "\u00A0" : letter}
         </span>
@@ -45,9 +62,10 @@ export default function PortfolioHome() {
         heroTl
           .from(".nav-reveal", { y: -24, opacity: 0, duration: 0.7 })
           .from(".hero-kicker", { y: 24, opacity: 0, duration: 0.55 }, "-=0.25")
-          .from(".hero-word", { yPercent: 115, opacity: 0, stagger: 0.09, duration: 0.95 }, "-=0.15")
-          .from(".hero-copy", { y: 28, opacity: 0, duration: 0.7 }, "-=0.35")
-          .from(".hero-action", { y: 18, opacity: 0, stagger: 0.07, duration: 0.5 }, "-=0.35");
+          .from(".hero-gradient-letter", { yPercent: 115, opacity: 0, stagger: 0.018, duration: 0.72 }, "-=0.15")
+          .from(".hero-copy", { y: 24, opacity: 0, duration: 0.6 }, "-=0.3")
+          .from(".hero-action", { y: 14, opacity: 0, stagger: 0.06, duration: 0.45 }, "-=0.25")
+          .from(".hero-tech-marquee", { y: 18, opacity: 0, duration: 0.55 }, "-=0.2");
 
         gsap.to(".hero-orb-a", {
           xPercent: 20,
@@ -134,41 +152,57 @@ export default function PortfolioHome() {
       <SiteHeader />
 
       <main>
-        <section ref={hero} id="top" className="hero relative flex min-h-screen overflow-hidden px-5 pb-16 pt-32 md:px-10">
+        <section ref={hero} id="top" className="hero relative flex min-h-screen overflow-hidden px-5 pb-0 pt-28 md:px-10 md:pt-28">
           <div className="hero-grid absolute inset-0 opacity-45" />
           <div className="hero-orb-a absolute -left-20 top-24 h-72 w-72 rounded-full bg-cyan-400/15 blur-3xl" />
           <div className="hero-orb-b absolute -right-24 bottom-10 h-96 w-96 rounded-full bg-blue-500/15 blur-3xl" />
-          <div className="relative z-10 mx-auto flex w-full max-w-[1500px] flex-col justify-end">
-            <div className="hero-kicker mb-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/48">
-                {profile.name} · {profile.location}
-              </p>
-              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-300/[0.06] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-emerald-200">
+          <div className="relative z-10 mx-auto grid w-full max-w-[1500px] flex-1 grid-rows-[auto_1fr_auto]">
+            <div className="hero-kicker flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p className="text-base font-semibold tracking-[-0.02em] text-white/90 md:text-lg">{profile.name}</p>
+                <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-white/35">{profile.location}</p>
+              </div>
+              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-300/[0.06] px-3.5 py-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-emerald-200">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
                 Open to Software Engineering & Applied AI
               </span>
             </div>
 
-            <div className="max-w-[1240px]">
-              <h1 className="overflow-hidden whitespace-nowrap text-[clamp(1.75rem,6.1vw,7rem)] font-semibold leading-[0.94] tracking-[-0.06em]">
-                <span className="hero-word inline-block">
-                  <AnimatedHeroText text="SOFTWARE ENGINEER" />
-                </span>
-              </h1>
-              <h1 className="mt-2 overflow-hidden whitespace-nowrap text-[clamp(1.75rem,6.1vw,7rem)] font-semibold leading-[0.98] tracking-[-0.06em]">
-                <span className="hero-word inline-block">
-                  <AnimatedHeroText text="BUILDING AI SYSTEMS" />
-                </span>
-              </h1>
-            </div>
+            <div className="flex flex-col items-center justify-center py-10 text-center md:py-14">
+              <div className="w-full">
+                <h1 className="overflow-hidden whitespace-nowrap text-[clamp(1.95rem,7vw,7.6rem)] font-semibold leading-[0.94] tracking-[-0.065em]">
+                  <span className="hero-word inline-block">
+                    <AnimatedHeroText text="SOFTWARE ENGINEER" />
+                  </span>
+                </h1>
+                <h1 className="mt-2 overflow-hidden whitespace-nowrap text-[clamp(1.95rem,7vw,7.6rem)] font-semibold leading-[0.98] tracking-[-0.065em]">
+                  <span className="hero-word inline-block">
+                    <AnimatedHeroText text="BUILDING AI SYSTEMS" />
+                  </span>
+                </h1>
+              </div>
 
-            <div className="mt-10 flex flex-col gap-6 border-t border-white/12 pt-7 lg:flex-row lg:items-center lg:justify-between">
-              <p className="hero-copy max-w-3xl text-base leading-7 text-white/62 md:text-lg">
+              <p className="hero-copy mt-7 max-w-3xl text-sm leading-6 text-white/52 md:text-base">
                 9+ years across web, mobile and backend engineering · MSc Artificial Intelligence with Distinction
               </p>
-              <div className="flex flex-wrap gap-3 lg:justify-end">
+              <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <a className="hero-action primary-btn" href="#projects">View flagship work</a>
                 <a className="hero-action secondary-btn" href={profile.cv} download>Download CV</a>
+              </div>
+            </div>
+
+            <div className="hero-tech-marquee tech-marquee -mx-5 border-t border-white/10 py-5 md:-mx-10" aria-label="Core technologies">
+              <div className="tech-marquee-track">
+                {[0, 1].map((copy) => (
+                  <div key={copy} className="tech-marquee-group" aria-hidden={copy === 1}>
+                    {heroTechnologies.map((tech) => (
+                      <div key={`${copy}-${tech.name}`} className="tech-logo-item">
+                        <img src={tech.src} alt="" className="h-6 w-6 shrink-0 object-contain md:h-7 md:w-7" draggable={false} />
+                        <span>{tech.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
