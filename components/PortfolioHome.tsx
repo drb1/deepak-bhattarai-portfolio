@@ -50,7 +50,7 @@ export default function PortfolioHome() {
           .from(".nav-reveal", { y: -24, opacity: 0, duration: 0.7 })
           .from(".hero-kicker", { y: 24, opacity: 0, duration: 0.55 }, "-=0.25")
           .from(".hero-word", {
-            yPercent: 105,
+            ...(window.innerWidth < 768 ? {} : { y: 28 }),
             opacity: 0,
             stagger: 0.08,
             duration: 0.78,
@@ -164,12 +164,12 @@ export default function PortfolioHome() {
 
             <div className="flex flex-col items-center justify-center py-6 text-center sm:py-8 md:py-14">
               <div className="w-full">
-                <h1 className="overflow-hidden whitespace-nowrap text-[clamp(1.95rem,7vw,7.6rem)] font-semibold leading-[0.94] tracking-[-0.065em]">
+                <h1 className="whitespace-nowrap bg-transparent text-[clamp(1.95rem,7vw,7.6rem)] font-semibold leading-[0.94] tracking-[-0.065em]">
                   <span className="hero-word inline-block">
                     <AnimatedHeroText text="SOFTWARE ENGINEER" />
                   </span>
                 </h1>
-                <h1 className="mt-2 overflow-hidden whitespace-nowrap text-[clamp(1.95rem,7vw,7.6rem)] font-semibold leading-[0.98] tracking-[-0.065em]">
+                <h1 className="mt-2 whitespace-nowrap bg-transparent text-[clamp(1.95rem,7vw,7.6rem)] font-semibold leading-[0.98] tracking-[-0.065em]">
                   <span className="hero-word inline-block">
                     <AnimatedHeroText text="BUILDING AI SYSTEMS" />
                   </span>
