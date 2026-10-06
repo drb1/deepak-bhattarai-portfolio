@@ -31,9 +31,11 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/deepak-bhattarai-7a5250193",
   github: "https://github.com/drb1",
   cv: "/files/Deepak_Bhattarai_AI_CV.pdf",
-  title: "Software Engineer × AI/ML Engineer",
+  title: "Software Engineer · Applied AI / ML",
+  headline: "Software engineer building production AI systems.",
+  availability: "Open to Software Engineering & Applied AI opportunities",
   intro:
-    "I build production software, intelligent systems and real-time platforms — combining nine years of software engineering with an MSc in Artificial Intelligence with Distinction.",
+    "9+ years building production web, mobile and backend systems, now applying that engineering depth to AI/ML products, intelligent platforms and research.",
 };
 
 export const stats = [
@@ -868,19 +870,19 @@ export const projects: Project[] = [
 
 export const skills = [
   {
-    title: "AI / Machine Learning",
-    items: ["Python", "TensorFlow/Keras", "Computer Vision", "OpenCV", "Deep Learning", "Transfer Learning", "Temporal Modelling", "LLM APIs", "Model Evaluation", "Real-time Inference"],
+    title: "Core Engineering",
+    items: ["Python", "TypeScript", "Next.js", "React", "FastAPI", "PostgreSQL", "REST APIs", "SQLAlchemy", "Node.js", "Laravel"],
   },
   {
-    title: "Backend / Data",
-    items: ["FastAPI", "SQLAlchemy", "Pydantic", "Alembic", "Laravel", "Node.js", "Express.js", "REST APIs", "JWT", "PostgreSQL", "MySQL", "MongoDB"],
+    title: "Applied AI / ML",
+    items: ["TensorFlow/Keras", "Computer Vision", "OpenCV", "Deep Learning", "MobileNetV2", "BiLSTM", "Transformers", "LLM APIs", "Model Evaluation", "Real-time Inference"],
   },
   {
-    title: "Frontend / Mobile",
-    items: ["React", "Next.js", "TypeScript", "JavaScript", "React Native", "Flutter", "Redux", "Tailwind CSS", "HTML5", "CSS3"],
+    title: "Platforms & Delivery",
+    items: ["Docker", "Git / GitHub", "VPS", "DigitalOcean", "LiveKit / WebRTC", "Azure IoT", "Object Storage", "Testing", "Performance Debugging", "CI/CD"],
   },
   {
-    title: "Infrastructure / Delivery",
-    items: ["Docker", "Git / GitHub", "VPS", "DigitalOcean", "Azure IoT", "LiveKit / WebRTC", "Testing", "Performance Debugging", "Agile / Scrum", "Jira"],
+    title: "Additional Technologies",
+    items: ["PHP", "React Native", "Flutter", "JavaScript", "Express.js", "MySQL", "MongoDB", "Redux", "Tailwind CSS", "HTML / CSS"],
   },
 ];
