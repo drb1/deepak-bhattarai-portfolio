@@ -15,6 +15,8 @@ export type Project = {
   contribution: string[];
   highlights: string[];
   architecture: string[];
+  proofPoints?: { label: string; value: string; detail: string }[];
+  decisions?: { title: string; detail: string }[];
   outcome: string;
 };
 
@@ -114,6 +116,18 @@ export const projects: Project[] = [
       "Docker/VPS deployment and object storage",
     ],
     architecture: ["Next.js client", "FastAPI API", "PostgreSQL", "LLM services", "LiveKit / audio", "Object storage"],
+    proofPoints: [
+      { label: "Product surfaces", value: "Student · Teacher · Admin", detail: "Role-specific workflows across learning, delivery and administration." },
+      { label: "Core skills", value: "Reading · Writing · Listening · Speaking", detail: "The learning and assessment model covers all four English-language skills." },
+      { label: "Assessment", value: "Placement · Practice · Exams", detail: "Multiple assessment modes share one structured content and results model." },
+      { label: "AI + realtime", value: "LLM marking · LiveKit/WebRTC", detail: "Subjective assessment and live teaching are integrated alongside deterministic workflows." },
+    ],
+    decisions: [
+      { title: "Hybrid marking instead of AI everywhere", detail: "Objective question types remain rule-based for predictable scoring, while writing and speaking use AI-assisted evaluation where subjective judgement is required." },
+      { title: "Modular backend boundaries", detail: "FastAPI modules, SQLAlchemy models and Alembic migrations keep lessons, exams, placement, teacher workflows and media features separable as the platform grows." },
+      { title: "Realtime media as its own concern", detail: "LiveKit/WebRTC and browser audio recording handle live and spoken interactions without coupling the core assessment API to realtime transport." },
+      { title: "Production-first storage and deployment", detail: "Dockerised services, PostgreSQL and object storage support media-heavy workflows while keeping application state and uploaded assets clearly separated." },
+    ],
     outcome:
       "A broad, production-oriented platform demonstrating the integration of AI assessment, real-time media and conventional learning-management workflows in one system.",
   },
@@ -141,6 +155,18 @@ export const projects: Project[] = [
     ],
     highlights: ["Four behaviour classes", "Spatiotemporal deep learning", "Model calibration & error analysis", "Rolling-buffer live inference", "Resource-aware deployment focus"],
     architecture: ["Live RGB video", "Frame sampling", "MobileNetV2", "Temporal model", "Smoothing", "Behaviour prediction"],
+    proofPoints: [
+      { label: "Behaviour classes", value: "4", detail: "Normal, aggressive, distracted and drowsy driving." },
+      { label: "Sequence window", value: "8-second clips", detail: "Short temporal sequences preserve behaviour context beyond single frames." },
+      { label: "Visual backbone", value: "MobileNetV2", detail: "A lightweight CNN backbone chosen with real-time inference constraints in mind." },
+      { label: "Evaluation", value: "F1 · ROC-AUC · mAP · ECE", detail: "Performance was examined beyond accuracy, including calibration and class-level behaviour." },
+    ],
+    decisions: [
+      { title: "Model behaviour over time", detail: "The pipeline uses short frame sequences rather than isolated images because driver behaviour is inherently temporal." },
+      { title: "Keep visual extraction lightweight", detail: "MobileNetV2 provides a compact visual representation before temporal modelling, supporting the goal of a real-time prototype." },
+      { title: "Compare temporal strategies", detail: "BiLSTM, Transformer and temporal-convolution alternatives were explored instead of assuming one sequence model would dominate." },
+      { title: "Evaluate reliability, not only headline accuracy", detail: "Confusion patterns, macro metrics, ROC-AUC, mAP and calibration/ECE were used to expose unstable or over-confident behaviour." },
+    ],
     outcome:
       "A research pipeline connecting comparative deep-learning experimentation to a working real-time inference prototype.",
   },
