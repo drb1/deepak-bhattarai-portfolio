@@ -208,7 +208,7 @@ export default function PortfolioHome() {
           </div>
         </section>
 
-        <section id="about" className="reveal-section px-5 py-28 md:px-10 md:py-40">
+        <section id="about" className="reveal-section px-5 pb-28 pt-14 md:px-10 md:pb-36 md:pt-20">
           <div className="mx-auto max-w-[1500px]">
             <p className="reveal-item section-label">01 / About</p>
             <div className="mt-8 grid gap-12 lg:grid-cols-[1.35fr_.65fr]">
